@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MetaGeometryFile creator="MatrixCalc" version="20151207">
+  <Components>
+    <Component name="component1:a">
+      <Shape name="Components\component1:a" id="1" visible="1" material="Copper (annealed)">
+        <MeshGroup3D list=""/>
+        <MeshGroup0D list=""/>
+        <MeshGroup1D list=""/>
+        <MeshGroup2D>
+          <Pos list="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24"/>
+          <Neg list=""/>
+          <DS list=""/>
+        </MeshGroup2D>
+      </Shape>
+    </Component>
+    <Component name="component1:substate">
+      <Shape name="Components\component1:substate" id="3" visible="1" material="FR-4 (lossy)">
+        <MeshGroup3D list=""/>
+        <MeshGroup0D list=""/>
+        <MeshGroup1D list=""/>
+        <MeshGroup2D>
+          <Pos list="25 26 27 28 29 30"/>
+          <Neg list=""/>
+          <DS list=""/>
+        </MeshGroup2D>
+      </Shape>
+    </Component>
+  </Components>
+  <SimulationDomain min="-33.91374588013 -33.91374588013 -32.16874694824" max="33.91374588013 33.91374588013 23.04874610901"/>
+  <Materials>
+    <Material name="air_0" priority="1">
+      <Color value="1 1 1"/>
+      <Transparency value="0"/>
+      <Wireframe value="0"/>
+      <Reflective value="1"/>
+      <Outline value="1"/>
+      <OutlineIfTransparent value="0"/>
+    </Material>
+    <Material name="Copper (annealed)" priority="1">
+      <Color value="1 1 1"/>
+      <Transparency value="0"/>
+      <Wireframe value="0"/>
+      <Reflective value="1"/>
+      <Outline value="1"/>
+      <OutlineIfTransparent value="0"/>
+    </Material>
+    <Material name="FR-4 (lossy)" priority="1">
+      <Color value="1 1 1"/>
+      <Transparency value="0"/>
+      <Wireframe value="0"/>
+      <Reflective value="1"/>
+      <Outline value="1"/>
+      <OutlineIfTransparent value="0"/>
+    </Material>
+  </Materials>
+  <GeometryFile filename="3d.slm" type="slim" subdomain_id=""/>
+  <MeshType type="HEX"/>
+  <HexMesh>
+    <Dimensions nx="63" ny="63" nz="34"/>
+    <MeshPlanesX values="-33.913747 -30.63205515285 -27.3503633057 -24.06867145855 -20.78697961139 -17.50528776424 -15.55244600997 -14.37016106462 -13.74677404308 -13.12338702154 -12.5 -12.22 -11.676 -11.132 -10.588 -10.044 -9.5 -9 -8.5 -7.928571428571 -7.357142857143 -6.785714285714 -6.214285714286 -5.642857142857 -5.071428571429 -4.5 -4 -3.5 -3 -2.5 -2 -1.5 -0.9 -0.3 0.3 0.9 1.5 2.101612387498 2.703224774996 3.304837162493 4.344800738082 5.5 6.655199261918 7.695162837507 8.296775225004 8.898387612502 9.5 10.044 10.588 11.132 11.676 12.22 12.5 13.12338702154 13.74677404308 14.37016106462 15.55244600997 17.50528776424 20.78697961139 24.06867145854 27.3503633057 30.63205515285 33.913747"/>
+    <MeshPlanesY values="-33.913747 -30.88804265072 -27.86233830144 -24.83663395216 -21.81092960288 -18.7852252536 -16.11737587712 -14.91158391808 -13.70579195904 -12.5 -11.70589716218 -10.91179432435 -10.11769148653 -9.5 -9 -8.5 -8 -7.5 -6.9 -6.3 -5.7 -5.1 -4.5 -3.938705803662 -3.377411607323 -2.816117410985 -2.183882589015 -1.622588392677 -1.061294196338 -0.5 0.1 0.7 1.3 1.9 2.5 3 3.5 4.035898384862 4.613248654052 5.190598923241 5.767949192431 6.345299461621 6.92264973081 7.5 8.07735026919 8.654700538379 9.232050807569 9.809401076758 10.38675134595 10.96410161514 11.5 12 12.5 13.12325998992 13.74651997984 14.36977996976 15.55535341744 17.52445829771 20.80231603817 24.08017377863 27.35803151908 30.63588925954 33.913747"/>
+    <MeshPlanesZ values="-32.168747 -29.13955697031 -26.11036694061 -23.08117691092 -20.05198688122 -17.02279685153 -14.37398266178 -13.16765510785 -11.96132755393 -10.755 -9.6117160119 -8.468432023801 -7.325148035701 -6.181864047602 -5.038580059502 -3.895296071402 -2.752012083303 -1.795603700532 -1.197069133688 -0.5985345668441 1.110223024625e-16 0.5333333333333 1.066666666667 1.6 2.225150021715 2.85030004343 3.475450065145 4.600417398054 6.370356144173 9.706034315338 13.0417124865 16.37739065767 19.71306882883 23.048747"/>
+  </HexMesh>
+</MetaGeometryFile>

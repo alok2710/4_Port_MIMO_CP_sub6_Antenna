@@ -1,0 +1,19 @@
+[Version]
+2
+[Author]
+Alok Yadav
+[Mesh Cells]
+92,160
+[Mesh Type]
+Hexahedral
+[Last Problem Type]
+High Frequency
+[Last Solver Type]
+HF Time Domain
+[Last Solver Type Abb]
+t
+[Results]
+Time Domain: S-Parameter
+[Modeler Unique ID]
+5:final_antenna_a.cst?1545c1353353a17511bf6b5d9936dd3b?16415:numberofparameters=0:port=1>mode=1>zre=0>zim=0?port=2>mode=1>zre=0>zim=0?port=3>mode=1>zre=0>zim=0?port=4>mode=1>zre=0>zim=0
+[Comment]

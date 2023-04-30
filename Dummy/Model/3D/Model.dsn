@@ -1,0 +1,131 @@
+*** File Version: 14.00
+
+Number of ports: 0
+Portnames:
+Modenumbers:
+Portlabels:
+StaticSources:
+ThermalSources:
+FloquetPortNames:
+FloquetPortModes:
+Terminals:
+TerminalToReferenceTable:
+Number of frequency-points: 0
+Fmin: 1.000000e+009
+Fmax: 6.000000e+009
+Fscale: 1.000000e+009
+
+
+
+
+
+*** newmonitor
+monname: "farfield (f=1)"
+nmonfrequencies: 1
+monfrequencies: "1" 
+montype: 18
+mondomain: 1
+mon_fmin: ""
+mon_fmax: ""
+mon_nfSteps: ""
+*** endmonitor
+
+*** newmonitor
+monname: "farfield (f=3.5)"
+nmonfrequencies: 1
+monfrequencies: "3.5" 
+montype: 18
+mondomain: 1
+mon_fmin: ""
+mon_fmax: ""
+mon_nfSteps: ""
+*** endmonitor
+
+*** newmonitor
+monname: "farfield (broadband)"
+nmonfrequencies: 0
+monfrequencies: 
+montype: 18
+mondomain: 1
+mon_fmin: "1"
+mon_fmax: "6"
+mon_nfSteps: "21"
+*** endmonitor
+
+*** newmonitor
+monname: "farfield (f=6)"
+nmonfrequencies: 1
+monfrequencies: "6" 
+montype: 18
+mondomain: 1
+mon_fmin: ""
+mon_fmax: ""
+mon_nfSteps: ""
+*** endmonitor
+
+*** newmonitor
+monname: "h-field (f=6)"
+nmonfrequencies: 1
+monfrequencies: "6" 
+montype: 1
+mondomain: 1
+mon_fmin: ""
+mon_fmax: ""
+mon_nfSteps: ""
+*** endmonitor
+
+*** newmonitor
+monname: "e-field (f=6)"
+nmonfrequencies: 1
+monfrequencies: "6" 
+montype: 0
+mondomain: 1
+mon_fmin: ""
+mon_fmax: ""
+mon_nfSteps: ""
+*** endmonitor
+
+*** newmonitor
+monname: "h-field (f=3.5)"
+nmonfrequencies: 1
+monfrequencies: "3.5" 
+montype: 1
+mondomain: 1
+mon_fmin: ""
+mon_fmax: ""
+mon_nfSteps: ""
+*** endmonitor
+
+*** newmonitor
+monname: "e-field (f=3.5)"
+nmonfrequencies: 1
+monfrequencies: "3.5" 
+montype: 0
+mondomain: 1
+mon_fmin: ""
+mon_fmax: ""
+mon_nfSteps: ""
+*** endmonitor
+
+*** newmonitor
+monname: "h-field (f=1)"
+nmonfrequencies: 1
+monfrequencies: "1" 
+montype: 1
+mondomain: 1
+mon_fmin: ""
+mon_fmax: ""
+mon_nfSteps: ""
+*** endmonitor
+
+*** newmonitor
+monname: "e-field (f=1)"
+nmonfrequencies: 1
+monfrequencies: "1" 
+montype: 0
+mondomain: 1
+mon_fmin: ""
+mon_fmax: ""
+mon_nfSteps: ""
+*** endmonitor
+

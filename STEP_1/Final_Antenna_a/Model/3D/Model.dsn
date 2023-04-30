@@ -1,0 +1,172 @@
+*** File Version: 14.00
+
+Number of ports: 4
+Portnames: 1 2 3 4
+Modenumbers: 1 1 1 1
+Portlabels: "" "" "" ""
+StaticSources:
+ThermalSources:
+FloquetPortNames:
+FloquetPortModes:
+Terminals:
+TerminalToReferenceTable:
+Number of frequency-points: 4
+Fmin: 1.000000e+09
+Fmax: 6.000000e+09
+Fscale: 1.000000e+09
+
+
+
+*** newset
+
+*** newmode
+SetType: 100
+Portname: 4
+Modenumber: 1
+Modetype: 4
+PortModeConsState: 0
+*** endmode
+
+*** endset
+
+
+*** newset
+
+*** newmode
+SetType: 100
+Portname: 3
+Modenumber: 1
+Modetype: 4
+PortModeConsState: 0
+*** endmode
+
+*** endset
+
+
+*** newset
+
+*** newmode
+SetType: 100
+Portname: 2
+Modenumber: 1
+Modetype: 4
+PortModeConsState: 0
+*** endmode
+
+*** endset
+
+
+*** newset
+
+*** newmode
+SetType: 100
+Portname: 1
+Modenumber: 1
+Modetype: 4
+PortModeConsState: 0
+*** endmode
+
+*** endset
+
+
+
+
+*** newmonitor
+monname: "farfield (f=1)"
+nmonfrequencies: 1
+monfrequencies: "1" 
+montype: 18
+mondomain: 1
+mon_fmin: ""
+mon_fmax: ""
+mon_nfSteps: ""
+*** endmonitor
+
+*** newmonitor
+monname: "farfield (f=3.5)"
+nmonfrequencies: 1
+monfrequencies: "3.5" 
+montype: 18
+mondomain: 1
+mon_fmin: ""
+mon_fmax: ""
+mon_nfSteps: ""
+*** endmonitor
+
+*** newmonitor
+monname: "farfield (f=6)"
+nmonfrequencies: 1
+monfrequencies: "6" 
+montype: 18
+mondomain: 1
+mon_fmin: ""
+mon_fmax: ""
+mon_nfSteps: ""
+*** endmonitor
+
+*** newmonitor
+monname: "h-field (f=6)"
+nmonfrequencies: 1
+monfrequencies: "6" 
+montype: 1
+mondomain: 1
+mon_fmin: ""
+mon_fmax: ""
+mon_nfSteps: ""
+*** endmonitor
+
+*** newmonitor
+monname: "e-field (f=6)"
+nmonfrequencies: 1
+monfrequencies: "6" 
+montype: 0
+mondomain: 1
+mon_fmin: ""
+mon_fmax: ""
+mon_nfSteps: ""
+*** endmonitor
+
+*** newmonitor
+monname: "h-field (f=3.5)"
+nmonfrequencies: 1
+monfrequencies: "3.5" 
+montype: 1
+mondomain: 1
+mon_fmin: ""
+mon_fmax: ""
+mon_nfSteps: ""
+*** endmonitor
+
+*** newmonitor
+monname: "e-field (f=3.5)"
+nmonfrequencies: 1
+monfrequencies: "3.5" 
+montype: 0
+mondomain: 1
+mon_fmin: ""
+mon_fmax: ""
+mon_nfSteps: ""
+*** endmonitor
+
+*** newmonitor
+monname: "h-field (f=1)"
+nmonfrequencies: 1
+monfrequencies: "1" 
+montype: 1
+mondomain: 1
+mon_fmin: ""
+mon_fmax: ""
+mon_nfSteps: ""
+*** endmonitor
+
+*** newmonitor
+monname: "e-field (f=1)"
+nmonfrequencies: 1
+monfrequencies: "1" 
+montype: 0
+mondomain: 1
+mon_fmin: ""
+mon_fmax: ""
+mon_nfSteps: ""
+*** endmonitor
+
