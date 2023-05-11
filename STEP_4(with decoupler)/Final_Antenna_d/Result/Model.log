@@ -1,0 +1,769 @@
+Defined reference frequency for open boundary condition (3.5 GHz) is larger
+than the lowest relevant system frequency (monitor at 1 GHz).
+Please check open boundary settings to ensure accurate monitor results for the
+lowest frequency of interest.
+
+--------------------------------------------------------------------------------
+Build version: 2016.1 Release from 2016-02-26 (change 422839)
+
+Starting adaptive port meshing.
+
+--------------------------------------------------------------------------------
+Mode calculation for port 1:
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Using electric shielding for port 1.
+
+--------------------------------------------------------------------------------
+Port mode solver: Detected dispersive material(s) at port 1. 
+Using a constant approximation of dispersive material(s) at 3.5 GHz and
+neglecting loss terms. 
+
+--------------------------------------------------------------------------------
+  -------------------------------- F-Calc 3.5 --------------------------------
+  Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
+  1      1      QTEM        205           0.101         47.8          ---
+  ----------------------------------------------------------------------------
+
+*** Warning ***
+
+Some higher order propagating modes at port 1 are not considered in time domain
+calculation. This possibly leads to an inaccurate energy balance. Consider to
+increase the number of modes or decrease the upper frequency limit. More...
+
+--------------------------------------------------------------------------------
+Pass 1 successfully completed. 
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+  -------------------------------- F-Calc 3.5 --------------------------------
+  Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
+  1      1      QTEM        209           0.376         48.6          ---
+  ----------------------------------------------------------------------------
+
+Pass 2 successfully completed. Delta (Line Imp.): 1.637923%
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+  -------------------------------- F-Calc 3.5 --------------------------------
+  Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
+  1      1      QTEM        230           18.7          49            ---
+  ----------------------------------------------------------------------------
+
+Pass 3 successfully completed. Delta (Line Imp.): 0.831783%
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+  -------------------------------- F-Calc 3.5 --------------------------------
+  Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
+  1      1      QTEM        254           0             49.2          ---
+  ----------------------------------------------------------------------------
+
+Pass 4 successfully completed. Delta (Line Imp.): 0.338902%
+Mode calculation for port 2:
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Using electric shielding for port 2.
+
+--------------------------------------------------------------------------------
+Port mode solver: Detected dispersive material(s) at port 2. 
+Using a constant approximation of dispersive material(s) at 3.5 GHz and
+neglecting loss terms. 
+
+--------------------------------------------------------------------------------
+  -------------------------------- F-Calc 3.5 --------------------------------
+  Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
+  2      1      QTEM        205           0.101         47.8          ---
+  ----------------------------------------------------------------------------
+
+*** Warning ***
+
+Some higher order propagating modes at port 2 are not considered in time domain
+calculation. This possibly leads to an inaccurate energy balance. Consider to
+increase the number of modes or decrease the upper frequency limit. More...
+
+--------------------------------------------------------------------------------
+Pass 1 successfully completed. 
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+  -------------------------------- F-Calc 3.5 --------------------------------
+  Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
+  2      1      QTEM        209           0.376         48.6          ---
+  ----------------------------------------------------------------------------
+
+Pass 2 successfully completed. Delta (Line Imp.): 1.637923%
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+  -------------------------------- F-Calc 3.5 --------------------------------
+  Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
+  2      1      QTEM        230           18.7          49            ---
+  ----------------------------------------------------------------------------
+
+Pass 3 successfully completed. Delta (Line Imp.): 0.831783%
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+  -------------------------------- F-Calc 3.5 --------------------------------
+  Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
+  2      1      QTEM        254           0             49.2          ---
+  ----------------------------------------------------------------------------
+
+Pass 4 successfully completed. Delta (Line Imp.): 0.338902%
+Mode calculation for port 3:
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Using electric shielding for port 3.
+
+--------------------------------------------------------------------------------
+Port mode solver: Detected dispersive material(s) at port 3. 
+Using a constant approximation of dispersive material(s) at 3.5 GHz and
+neglecting loss terms. 
+
+--------------------------------------------------------------------------------
+  -------------------------------- F-Calc 3.5 --------------------------------
+  Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
+  3      1      QTEM        205           0.101         47.8          ---
+  ----------------------------------------------------------------------------
+
+*** Warning ***
+
+Some higher order propagating modes at port 3 are not considered in time domain
+calculation. This possibly leads to an inaccurate energy balance. Consider to
+increase the number of modes or decrease the upper frequency limit. More...
+
+--------------------------------------------------------------------------------
+Pass 1 successfully completed. 
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+  -------------------------------- F-Calc 3.5 --------------------------------
+  Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
+  3      1      QTEM        209           0.376         48.6          ---
+  ----------------------------------------------------------------------------
+
+Pass 2 successfully completed. Delta (Line Imp.): 1.637923%
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+  -------------------------------- F-Calc 3.5 --------------------------------
+  Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
+  3      1      QTEM        230           18.7          49            ---
+  ----------------------------------------------------------------------------
+
+Pass 3 successfully completed. Delta (Line Imp.): 0.831783%
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+  -------------------------------- F-Calc 3.5 --------------------------------
+  Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
+  3      1      QTEM        254           0             49.2          ---
+  ----------------------------------------------------------------------------
+
+Pass 4 successfully completed. Delta (Line Imp.): 0.338902%
+Mode calculation for port 4:
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Using electric shielding for port 4.
+
+--------------------------------------------------------------------------------
+Port mode solver: Detected dispersive material(s) at port 4. 
+Using a constant approximation of dispersive material(s) at 3.5 GHz and
+neglecting loss terms. 
+
+--------------------------------------------------------------------------------
+  -------------------------------- F-Calc 3.5 --------------------------------
+  Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
+  4      1      QTEM        205           0.101         47.8          ---
+  ----------------------------------------------------------------------------
+
+*** Warning ***
+
+Some higher order propagating modes at port 4 are not considered in time domain
+calculation. This possibly leads to an inaccurate energy balance. Consider to
+increase the number of modes or decrease the upper frequency limit. More...
+
+--------------------------------------------------------------------------------
+Pass 1 successfully completed. 
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+  -------------------------------- F-Calc 3.5 --------------------------------
+  Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
+  4      1      QTEM        209           0.376         48.6          ---
+  ----------------------------------------------------------------------------
+
+Pass 2 successfully completed. Delta (Line Imp.): 1.637923%
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+  -------------------------------- F-Calc 3.5 --------------------------------
+  Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
+  4      1      QTEM        230           18.7          49            ---
+  ----------------------------------------------------------------------------
+
+Pass 3 successfully completed. Delta (Line Imp.): 0.831783%
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+  -------------------------------- F-Calc 3.5 --------------------------------
+  Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
+  4      1      QTEM        254           0             49.2          ---
+  ----------------------------------------------------------------------------
+
+Pass 4 successfully completed. Delta (Line Imp.): 0.338902%
+Adaptive port meshing finished. 
+
+--------------------------------------------------------------------------------
+
+Solver started at: 03:13 PM Tuesday, 02. May 2023
+
+  Module:  Time Domain: S-Parameter (Win 64)
+  Version: 2016.1 Release from 2016-02-26 (change 422839)
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+======================================================================
+ Solver cycle: 1
+======================================================================
+
+Stimulation at port 1 (mode 1) 
+
+
+--------------------------------------------------------------------------------
+Units settings: 
+
+  Dimensions: mm
+  Frequency:  GHz
+  Time:       ns
+
+--------------------------------------------------------------------------------
+Mesh statistics:
+
+   Hexahedral mesh type: FPBA [accuracy enhancement is enabled]
+
+   Parallelization type: domain decomposition
+      Number of parallel working threads: 2
+      Number of calculation domains used: 2
+
+   Used point accuracy enhancement value: 74.00%.
+   PBA fill limit: 98.63% (inverse)
+
+
+--------------------------------------------------------------------------------
+Using electric shielding for port 1, 2, 3, 4.
+
+--------------------------------------------------------------------------------
+Port mode solver: Detected dispersive material(s) at port 1, 2, 3, 4. 
+Using a constant approximation of dispersive material(s) at 3.5 GHz and
+neglecting loss terms. 
+
+--------------------------------------------------------------------------------
+Boundary conditions: 
+
+  YZsymmetry: none
+  XZsymmetry: none
+  XYsymmetry: none
+
+  Xmin: expanded open, 4 Layer, depth 12.3886 mm
+  Xmax: expanded open, 4 Layer, depth 12.3886 mm
+
+  Ymin: expanded open, 4 Layer, depth 12.0563 mm
+  Ymax: expanded open, 4 Layer, depth 12.0563 mm
+
+  Zmin: expanded open, 4 Layer, depth 13.2587 mm
+  Zmax: expanded open, 4 Layer, depth 12.4052 mm
+
+  PML-Type: Convolution PML
+
+--------------------------------------------------------------------------------
+Frequency settings: 
+
+  Fmin:         1
+  Fmax:         6
+  Nfsteps(lin): 1001
+
+--------------------------------------------------------------------------------
+Waveguide boundaries:
+
+Port: 1
+
+  -------------------------------- F-Calc 3.5 --------------------------------
+  Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
+  1      1      QTEM        205           0.101         49.2          ---
+  ----------------------------------------------------------------------------
+
+Port: 2
+
+  -------------------------------- F-Calc 3.5 --------------------------------
+  Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
+  2      1      QTEM        205           0.101         49.2          ---
+  ----------------------------------------------------------------------------
+
+Port: 3
+
+  -------------------------------- F-Calc 3.5 --------------------------------
+  Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
+  3      1      QTEM        205           0.101         49.2          ---
+  ----------------------------------------------------------------------------
+
+Port: 4
+
+  -------------------------------- F-Calc 3.5 --------------------------------
+  Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
+  4      1      QTEM        205           0.101         49.2          ---
+  ----------------------------------------------------------------------------
+
+*** Warning ***
+
+Some higher order propagating modes at port 1 are not considered in time domain
+calculation. This possibly leads to an inaccurate energy balance. Consider to
+increase the number of modes or decrease the upper frequency limit. More...
+
+--------------------------------------------------------------------------------
+*** Warning ***
+
+Some higher order propagating modes at port 2 are not considered in time domain
+calculation. This possibly leads to an inaccurate energy balance. Consider to
+increase the number of modes or decrease the upper frequency limit. More...
+
+--------------------------------------------------------------------------------
+*** Warning ***
+
+Some higher order propagating modes at port 3 are not considered in time domain
+calculation. This possibly leads to an inaccurate energy balance. Consider to
+increase the number of modes or decrease the upper frequency limit. More...
+
+--------------------------------------------------------------------------------
+*** Warning ***
+
+Some higher order propagating modes at port 4 are not considered in time domain
+calculation. This possibly leads to an inaccurate energy balance. Consider to
+increase the number of modes or decrease the upper frequency limit. More...
+
+--------------------------------------------------------------------------------
+Field update statistics:
+
+  Number of components in total: 	771261
+  Number of lossy metal components:	5396
+  Number of disp. elements:		19838
+
+Subcycling state:      Automatically deactivated
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Broadband farfield monitor expansion origin: 
+   x: 0
+   y: 0
+   z: -4.56
+
+--------------------------------------------------------------------------------
+Broadband farfield monitor: Using order 12. (168 farfield modes.)
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Steady state energy criterion met, solver finished successfully.
+
+--------------------------------------------------------------------------------
+Frequency domain results normalized to default signal.
+
+--------------------------------------------------------------------------------
+
+  ----------------------------------------------------------------------------
+                      Peak memory used (kB)         Free physical memory (kB) 
+                                                    At begin     Minimum      
+  ----------------------------------------------------------------------------
+  Matrices calc.      153312                        1573152      1479636      
+  Solver run total    273180                        1605772      1500668      
+  ----------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Solver Statistics:
+
+  Hardware:
+     Computer name:                 	LAPTOP-BK7GUF1N 
+
+     Number of CPU threads:             4
+     Hardware info:                  	Hardware acceleration not activated
+
+  Number of mesh cells:             	124200
+  Excitation duration:              	1.42181950e+000 ns 
+  Calculation time for excitation:  	15     	s
+  Number of calculated pulse widths:	4.21193 
+  Steady state accuracy limit:      	-30	dB 
+  Simulated number of time steps:   	11342  
+  Maximum number of time steps:     	53856  
+  Time step width:
+     without subcycles:             	5.28001903e-004 ns
+     used:                          	5.28001903e-004 ns
+
+  Matrix calculation time:          	21     	s
+  Solver setup time:                	6      	s
+  Solver loop time:                 	64     	s
+  Solver post processing time:      	2      	s
+  Processing of broadband farfields:	4      	s
+                                    	------------
+  Total solver time:                	97     	s  ( = 0 h, 1 m, 37 s )
+
+--------------------------------------------------------------------------------
+======================================================================
+ Solver cycle: 2
+======================================================================
+
+Stimulation at port 2 (mode 1) 
+
+
+--------------------------------------------------------------------------------
+Units settings: 
+
+  Dimensions: mm
+  Frequency:  GHz
+  Time:       ns
+
+--------------------------------------------------------------------------------
+Boundary conditions: 
+
+  YZsymmetry: none
+  XZsymmetry: none
+  XYsymmetry: none
+
+  Xmin: expanded open, 4 Layer, depth 12.3886 mm
+  Xmax: expanded open, 4 Layer, depth 12.3886 mm
+
+  Ymin: expanded open, 4 Layer, depth 12.0563 mm
+  Ymax: expanded open, 4 Layer, depth 12.0563 mm
+
+  Zmin: expanded open, 4 Layer, depth 13.2587 mm
+  Zmax: expanded open, 4 Layer, depth 12.4052 mm
+
+  PML-Type: Convolution PML
+
+--------------------------------------------------------------------------------
+Frequency settings: 
+
+  Fmin:         1
+  Fmax:         6
+  Nfsteps(lin): 1001
+
+--------------------------------------------------------------------------------
+Field update statistics:
+
+  Number of components in total: 	771261
+  Number of lossy metal components:	5396
+  Number of disp. elements:		19838
+
+Subcycling state:      Automatically deactivated
+
+--------------------------------------------------------------------------------
+Broadband farfield monitor expansion origin: 
+   x: 0
+   y: 0
+   z: -4.56
+
+--------------------------------------------------------------------------------
+Broadband farfield monitor: Using order 12. (168 farfield modes.)
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Steady state energy criterion met, solver finished successfully.
+
+--------------------------------------------------------------------------------
+Frequency domain results normalized to default signal.
+
+--------------------------------------------------------------------------------
+
+  ----------------------------------------------------------------------------
+                      Peak memory used (kB)         Free physical memory (kB) 
+                                                    At begin     Minimum      
+  ----------------------------------------------------------------------------
+  Matrices calc.      153312                        1573152      1479636      
+  Solver run total    273180                        1582996      1521564      
+  ----------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Solver Statistics:
+
+  Hardware:
+     Computer name:                 	LAPTOP-BK7GUF1N 
+
+     Number of CPU threads:             4
+     Hardware info:                  	Hardware acceleration not activated
+
+  Number of mesh cells:             	124200
+  Excitation duration:              	1.42181950e+000 ns 
+  Calculation time for excitation:  	15     	s
+  Number of calculated pulse widths:	4.21193 
+  Steady state accuracy limit:      	-30	dB 
+  Simulated number of time steps:   	11342  
+  Maximum number of time steps:     	53856  
+  Time step width:
+     without subcycles:             	5.28001903e-004 ns
+     used:                          	5.28001903e-004 ns
+
+  Reloading matrices:               	0      	s
+  Solver setup time:                	4      	s
+  Solver loop time:                 	64     	s
+  Solver post processing time:      	-1     	s
+  Processing of broadband farfields:	9      	s
+                                    	------------
+  Total solver time:                	76     	s  ( = 0 h, 1 m, 16 s )
+
+--------------------------------------------------------------------------------
+======================================================================
+ Solver cycle: 3
+======================================================================
+
+Stimulation at port 3 (mode 1) 
+
+
+--------------------------------------------------------------------------------
+Units settings: 
+
+  Dimensions: mm
+  Frequency:  GHz
+  Time:       ns
+
+--------------------------------------------------------------------------------
+Boundary conditions: 
+
+  YZsymmetry: none
+  XZsymmetry: none
+  XYsymmetry: none
+
+  Xmin: expanded open, 4 Layer, depth 12.3886 mm
+  Xmax: expanded open, 4 Layer, depth 12.3886 mm
+
+  Ymin: expanded open, 4 Layer, depth 12.0563 mm
+  Ymax: expanded open, 4 Layer, depth 12.0563 mm
+
+  Zmin: expanded open, 4 Layer, depth 13.2587 mm
+  Zmax: expanded open, 4 Layer, depth 12.4052 mm
+
+  PML-Type: Convolution PML
+
+--------------------------------------------------------------------------------
+Frequency settings: 
+
+  Fmin:         1
+  Fmax:         6
+  Nfsteps(lin): 1001
+
+--------------------------------------------------------------------------------
+Field update statistics:
+
+  Number of components in total: 	771261
+  Number of lossy metal components:	5396
+  Number of disp. elements:		19838
+
+Subcycling state:      Automatically deactivated
+
+--------------------------------------------------------------------------------
+Broadband farfield monitor expansion origin: 
+   x: 0
+   y: 0
+   z: -4.56
+
+--------------------------------------------------------------------------------
+Broadband farfield monitor: Using order 12. (168 farfield modes.)
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Steady state energy criterion met, solver finished successfully.
+
+--------------------------------------------------------------------------------
+Frequency domain results normalized to default signal.
+
+--------------------------------------------------------------------------------
+
+  ----------------------------------------------------------------------------
+                      Peak memory used (kB)         Free physical memory (kB) 
+                                                    At begin     Minimum      
+  ----------------------------------------------------------------------------
+  Matrices calc.      153312                        1573152      1479636      
+  Solver run total    273732                        1622592      1249804      
+  ----------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Solver Statistics:
+
+  Hardware:
+     Computer name:                 	LAPTOP-BK7GUF1N 
+
+     Number of CPU threads:             4
+     Hardware info:                  	Hardware acceleration not activated
+
+  Number of mesh cells:             	124200
+  Excitation duration:              	1.42181950e+000 ns 
+  Calculation time for excitation:  	16     	s
+  Number of calculated pulse widths:	4.21193 
+  Steady state accuracy limit:      	-30	dB 
+  Simulated number of time steps:   	11342  
+  Maximum number of time steps:     	53856  
+  Time step width:
+     without subcycles:             	5.28001903e-004 ns
+     used:                          	5.28001903e-004 ns
+
+  Reloading matrices:               	0      	s
+  Solver setup time:                	4      	s
+  Solver loop time:                 	59     	s
+  Solver post processing time:      	-8     	s
+  Processing of broadband farfields:	12     	s
+                                    	------------
+  Total solver time:                	67     	s  ( = 0 h, 1 m, 7 s )
+
+--------------------------------------------------------------------------------
+======================================================================
+ Solver cycle: 4
+======================================================================
+
+Stimulation at port 4 (mode 1) 
+
+
+--------------------------------------------------------------------------------
+*** Warning ***
+
+2023 May 02: 15:17:13: current system memory usage reached 85%
+
+--------------------------------------------------------------------------------
+Units settings: 
+
+  Dimensions: mm
+  Frequency:  GHz
+  Time:       ns
+
+--------------------------------------------------------------------------------
+Boundary conditions: 
+
+  YZsymmetry: none
+  XZsymmetry: none
+  XYsymmetry: none
+
+  Xmin: expanded open, 4 Layer, depth 12.3886 mm
+  Xmax: expanded open, 4 Layer, depth 12.3886 mm
+
+  Ymin: expanded open, 4 Layer, depth 12.0563 mm
+  Ymax: expanded open, 4 Layer, depth 12.0563 mm
+
+  Zmin: expanded open, 4 Layer, depth 13.2587 mm
+  Zmax: expanded open, 4 Layer, depth 12.4052 mm
+
+  PML-Type: Convolution PML
+
+--------------------------------------------------------------------------------
+Frequency settings: 
+
+  Fmin:         1
+  Fmax:         6
+  Nfsteps(lin): 1001
+
+--------------------------------------------------------------------------------
+Field update statistics:
+
+  Number of components in total: 	771261
+  Number of lossy metal components:	5396
+  Number of disp. elements:		19838
+
+Subcycling state:      Automatically deactivated
+
+--------------------------------------------------------------------------------
+Broadband farfield monitor expansion origin: 
+   x: 0
+   y: 0
+   z: -4.56
+
+--------------------------------------------------------------------------------
+Broadband farfield monitor: Using order 12. (168 farfield modes.)
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Steady state energy criterion met, solver finished successfully.
+
+--------------------------------------------------------------------------------
+Frequency domain results normalized to default signal.
+
+--------------------------------------------------------------------------------
+
+  ----------------------------------------------------------------------------
+                      Peak memory used (kB)         Free physical memory (kB) 
+                                                    At begin     Minimum      
+  ----------------------------------------------------------------------------
+  Matrices calc.      153312                        1573152      1479636      
+  Solver run total    276000                        1309208      1144156      
+  ----------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Solver Statistics:
+
+  Hardware:
+     Computer name:                 	LAPTOP-BK7GUF1N 
+
+     Number of CPU threads:             4
+     Hardware info:                  	Hardware acceleration not activated
+
+  Number of mesh cells:             	124200
+  Excitation duration:              	1.42181950e+000 ns 
+  Calculation time for excitation:  	12     	s
+  Number of calculated pulse widths:	4.21193 
+  Steady state accuracy limit:      	-30	dB 
+  Simulated number of time steps:   	11342  
+  Maximum number of time steps:     	53856  
+  Time step width:
+     without subcycles:             	5.28001903e-004 ns
+     used:                          	5.28001903e-004 ns
+
+  Reloading matrices:               	0      	s
+  Solver setup time:                	3      	s
+  Solver loop time:                 	51     	s
+  Solver post processing time:      	-11    	s
+  Processing of broadband farfields:	17     	s
+                                    	------------
+  Total solver time:                	60     	s
+
+--------------------------------------------------------------------------------
+
+  Adaptive port meshing time:       	123    	s  ( = 0 h, 2 m, 3 s )
+  Total solver time (all cycles):   	304    	s  ( = 0 h, 5 m, 4 s )
+                                    	------------
+  Total simulation time:            	427    	s  ( = 0 h, 7 m, 7 s )
+
+--------------------------------------------------------------------------------
+Solver finished at: 03:18 PM Tuesday, 02. May 2023
+
+
+--------------------------------------------------------------------------------

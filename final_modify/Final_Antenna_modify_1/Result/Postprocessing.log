@@ -1,0 +1,24 @@
+Postprocessing Logfile 
+
+----------------------------------------------------------------------------------------
+Units settings: 
+
+  Dimensions: mm
+  Frequency:  GHz
+  Time:       ns
+
+----------------------------------------------------------------------------------------
+
+Template based postprocessing started at: 03:51 PM Tuesday, 02. May 2023
+
+  Evaluating 'Realized Gain,Theta=0,Phi=0.0': 17 s
+  Evaluating 'Directivity,Theta=159,Phi=0.0': 9 s
+  Evaluating 'Directivity,3D,Max. Value (Solid Angle)': 11 s
+  Evaluating 'Directivity,Theta=159,Max. Value': 11 s
+  Evaluating 'Directivity,Phi=0.0,Max. Value': 11 s
+  Evaluating 'Axial ratio,Theta=0,Phi=0.0': 10 s
+
+  Total time: 72 s  ( = 0 h, 1 m, 12 s )
+
+Template based postprocessing finished at: 03:52 PM Tuesday, 02. May 2023
+----------------------------------------------------------------------------------------

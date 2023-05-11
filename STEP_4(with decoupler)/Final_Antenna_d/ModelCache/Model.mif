@@ -3,6 +3,7 @@
 [PCB_BODIES: False]
 [PCB_IMPORT: False]
 [DISABLE_FAST_LOAD: False]
+[WCS: 15 27.5 -0.035 0 0 1 1 0 0]
 [BBOX:-48.913747000000001 48.913747000000001 -48.913747000000001 48.913747000000001 -32.168747000000003 23.048747000000002]
 [BBOX_STRUCTURE:-27.5 27.500000000000004 -27.500000000000004 27.5 -10.755000000000001 1.6350000000000002]
 [UNITS]
@@ -421,7 +422,7 @@ Solver.FrequencyRange "1", "6"
      .ConsiderForStructureBoundary "False" 
      .Shield "PEC" 
      .ReferenceWCS "6.1775", "12.22", "0", "0", "0", "1", "1", "0", "0"
-(TRANSFORM) "0", "0", "1", "1", "0", "0", "0", "1", "0"| "-27.22", "27.5", "-10.755"(ENDTRANSFORM)
+(TRANSFORM) "0", "0", "1", "1", "0", "0", "0", "1", "0"| "-42.22", "3.5527136788005e-015", "-10.72"(ENDTRANSFORM)
 [ENDWAVEGUIDE]
 [WAVEGUIDE: 2]
      .Label "" 
@@ -445,7 +446,7 @@ Solver.FrequencyRange "1", "6"
      .ConsiderForStructureBoundary "False" 
      .Shield "PEC" 
      .ReferenceWCS "6.1775", "12.22", "0", "0", "0", "1", "1", "0", "0"
-(TRANSFORM) "0", "0", "1", "1", "0", "0", "0", "1", "0"| "2.78", "27.5", "-10.755"(ENDTRANSFORM)
+(TRANSFORM) "0", "0", "1", "1", "0", "0", "0", "1", "0"| "-12.22", "0", "-10.72"(ENDTRANSFORM)
 [ENDWAVEGUIDE]
 [WAVEGUIDE: 3]
      .Label "" 
@@ -469,7 +470,7 @@ Solver.FrequencyRange "1", "6"
      .ConsiderForStructureBoundary "False" 
      .Shield "PEC" 
      .ReferenceWCS "6.1775", "12.22", "0", "0", "0", "-1", "1", "0", "0"
-(TRANSFORM) "0", "0", "1", "1", "0", "0", "0", "1", "0"| "-27.22", "-27.5", "-10.755"(ENDTRANSFORM)
+(TRANSFORM) "0", "0", "1", "1", "0", "0", "0", "1", "0"| "-42.22", "-55", "-10.72"(ENDTRANSFORM)
 [ENDWAVEGUIDE]
 [WAVEGUIDE: 4]
      .Label "" 
@@ -493,5 +494,5 @@ Solver.FrequencyRange "1", "6"
      .ConsiderForStructureBoundary "False" 
      .Shield "PEC" 
      .ReferenceWCS "6.1775", "12.22", "0", "0", "0", "-1", "1", "0", "0"
-(TRANSFORM) "0", "0", "1", "1", "0", "0", "0", "1", "0"| "2.78", "-27.5", "-10.755"(ENDTRANSFORM)
+(TRANSFORM) "0", "0", "1", "1", "0", "0", "0", "1", "0"| "-12.22", "-55", "-10.72"(ENDTRANSFORM)
 [ENDWAVEGUIDE]

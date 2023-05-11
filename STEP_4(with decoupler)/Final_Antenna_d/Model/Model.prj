@@ -3,7 +3,7 @@
 [Author]
 Alok Yadav
 [Mesh Cells]
-
+124,200
 [Mesh Type]
 Hexahedral
 [Last Problem Type]
@@ -13,7 +13,7 @@ HF Time Domain
 [Last Solver Type Abb]
 t
 [Results]
-Unavailable
+Time Domain: S-Parameter
 [Modeler Unique ID]
-5:final_antenna_d.cst?08681cf49fb777ee93939828b163e3ae?23471:numberofparameters=0:port=1>mode=1>zre=0>zim=0?port=2>mode=1>zre=0>zim=0?port=3>mode=1>zre=0>zim=0?port=4>mode=1>zre=0>zim=0
+5:final_antenna_d.cst?fe80e3db2212665b1760d237195944a9?21255:numberofparameters=0:port=1>mode=1>zre=0>zim=0?port=2>mode=1>zre=0>zim=0?port=3>mode=1>zre=0>zim=0?port=4>mode=1>zre=0>zim=0
 [Comment]
