@@ -1,0 +1,74 @@
+Version = 200810160 
+Nfiles = 1 
+// Settings 
+Plot_Mode = -1 
+Vary = 0 
+Const_angle_1D = 9.000000e+01 
+Field_Type = -1 
+UserNMultipol = 0 
+IsTimeDomainFF = 0 
+Plot_Mode = -1 
+Distance = 1.000000e+00 
+PlotRangeOnly = 0 
+Theta_Start = 0.000000e+00 
+Theta_End = 1.800000e+02 
+Phi_Start = 0.000000e+00 
+Phi_End = 3.600000e+02 
+AxesType = 1 
+xaxis = 1.000000e+00 0.000000e+00 0.000000e+00 
+zaxis = 0.000000e+00 0.000000e+00 1.000000e+00 
+UserRefPolarisation = 0.000000e+00 1.000000e+00 0.000000e+00 
+Coord_System = 1 
+OriginType = 0 
+Origin = 0.000000e+00 0.000000e+00 0.000000e+00 
+// Array 
+Array_feature_enabled = 0 
+Calculate_new = 0 
+Type = 0 
+Geometric_scaling = 1.000000e+00 
+Number_of_antennas_x 1 
+Number_of_antennas_y 1 
+Number_of_antennas_z 1 
+Phase_difference_x 0.000000e+00 
+Phase_difference_y 0.000000e+00 
+Phase_difference_z 0.000000e+00 
+Space_Shift_x 0.000000e+00 
+Space_Shift_y 0.000000e+00 
+Space_Shift_z 0.000000e+00 
+User_changed_defaults = 0 
+Number_of_antennas = 1 
+AntennaNo = 0 
+Position_x = 0.000000e+00 
+Position_y = 0.000000e+00 
+Position_z = 0.000000e+00 
+Amplitude = 1.000000e+00 
+Phase = 0.000000e+00 
+UserMirrorPlane = 0 
+// Mirror Plane 1
+Version = 0 
+Type = 10 
+Use = 0 
+Direction = -1 
+Metric_position = 0.000000e+00 
+Lossy_plane = 0 
+Epsilon = 0.000000e+00 
+Kappa = 0.000000e+00 
+// Mirror Plane 2
+Version = 0 
+Type = 10 
+Use = 0 
+Direction = -1 
+Metric_position = 0.000000e+00 
+Lossy_plane = 0 
+Epsilon = 0.000000e+00 
+Kappa = 0.000000e+00 
+// Buffer Files 
+ Buffer:
+farfield (broadband)_1_buffer1.ffp
+ Source:
+farfield (broadband)1D_1.ffp
+ IsTimeDomain = 0 
+ Frequency = 3.500000e+00 
+ Time  = 0.000000e+00 
+ Step  = 1.000000e+00 
+ Step2 = -1.000000e+00 

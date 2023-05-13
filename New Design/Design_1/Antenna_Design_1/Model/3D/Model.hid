@@ -9,9 +9,7 @@
 [start]command
 [end]command
 [start]content
-
 Solid.Delete "component1:substrate"
-
 [end]content
 [start]recover_picks
 1
@@ -27,9 +25,7 @@ Solid.Delete "component1:substrate"
 [start]command
 [end]command
 [start]content
-
 Solid.Delete "component1:Substrate"
-
 [end]content
 [start]recover_picks
 1
@@ -45,9 +41,7 @@ Solid.Delete "component1:Substrate"
 [start]command
 [end]command
 [start]content
-
 Solid.Delete "component1:Element_1"
-
 [end]content
 [start]recover_picks
 1
@@ -76,13 +70,10 @@ Solid.Delete "component1:Element_1"
 10
 [end]block_index
 [start]command
-
 '@ activate global coordinates
-
 [end]command
 [start]content
 WCS.ActivateWCS "global"
-
 [end]content
 [start]recover_picks
 0
@@ -143,9 +134,7 @@ WCS.ActivateWCS "global"
 [start]command
 [end]command
 [start]content
-
 Solid.Delete "component1:solid1"
-
 [end]content
 [start]recover_picks
 1
@@ -206,9 +195,7 @@ Solid.Delete "component1:solid1"
 [start]command
 [end]command
 [start]content
-
 Solid.Delete "component1:solid1"
-
 [end]content
 [start]recover_picks
 1
@@ -224,9 +211,7 @@ Solid.Delete "component1:solid1"
 [start]command
 [end]command
 [start]content
-
 Solid.Delete "component1:solid1"
-
 [end]content
 [start]recover_picks
 1
@@ -257,9 +242,7 @@ Solid.Delete "component1:solid1"
 [start]command
 [end]command
 [start]content
-
 Solid.Delete "component1:solid1"
-
 [end]content
 [start]recover_picks
 1
@@ -275,9 +258,7 @@ Solid.Delete "component1:solid1"
 [start]command
 [end]command
 [start]content
-
 Solid.Delete "component1:solid1"
-
 [end]content
 [start]recover_picks
 1
@@ -308,9 +289,7 @@ Solid.Delete "component1:solid1"
 [start]command
 [end]command
 [start]content
-
 Solid.Delete "component1:solid1"
-
 [end]content
 [start]recover_picks
 1
@@ -324,13 +303,10 @@ Solid.Delete "component1:solid1"
 32
 [end]block_index
 [start]command
-
 '@ activate local coordinates
-
 [end]command
 [start]content
 WCS.ActivateWCS "local"
-
 [end]content
 [start]recover_picks
 0
@@ -344,9 +320,7 @@ WCS.ActivateWCS "local"
 33
 [end]block_index
 [start]command
-
 '@ transform: translate component1:Element_1
-
 [end]command
 [start]content
 With Transform 
@@ -361,7 +335,6 @@ With Transform
      .MultipleSelection "False" 
      .Transform "Shape", "Translate" 
 End With 
-
 [end]content
 [start]recover_picks
 1
@@ -375,13 +348,10 @@ End With
 34
 [end]block_index
 [start]command
-
 '@ activate global coordinates
-
 [end]command
 [start]content
 WCS.ActivateWCS "global"
-
 [end]content
 [start]recover_picks
 0
@@ -442,9 +412,7 @@ WCS.ActivateWCS "global"
 [start]command
 [end]command
 [start]content
-
 Solid.Delete "component1:solid1"
-
 [end]content
 [start]recover_picks
 1
@@ -458,13 +426,10 @@ Solid.Delete "component1:solid1"
 39
 [end]block_index
 [start]command
-
 '@ activate local coordinates
-
 [end]command
 [start]content
 WCS.ActivateWCS "local"
-
 [end]content
 [start]recover_picks
 0
@@ -480,9 +445,7 @@ WCS.ActivateWCS "local"
 [start]command
 [end]command
 [start]content
-
 Solid.Delete "component1:solid1_1"
-
 [end]content
 [start]recover_picks
 1
@@ -498,9 +461,7 @@ Solid.Delete "component1:solid1_1"
 [start]command
 [end]command
 [start]content
-
 Solid.Delete "component1:solid1_2"
-
 [end]content
 [start]recover_picks
 1
@@ -516,9 +477,7 @@ Solid.Delete "component1:solid1_2"
 [start]command
 [end]command
 [start]content
-
 Solid.Delete "component1:solid1_3"
-
 [end]content
 [start]recover_picks
 1
