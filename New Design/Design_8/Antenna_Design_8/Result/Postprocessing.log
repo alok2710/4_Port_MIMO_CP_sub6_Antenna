@@ -1,0 +1,19 @@
+Postprocessing Logfile 
+
+----------------------------------------------------------------------------------------
+Units settings: 
+
+  Dimensions: mm
+  Frequency:  GHz
+  Time:       ns
+
+----------------------------------------------------------------------------------------
+
+Template based postprocessing started at: 01:17 AM Wednesday, 17. May 2023
+
+  Evaluating 'Directivity,Theta=0,Phi=0': 19 s
+
+  Total time: 20 s  ( = 0 h, 0 m, 20 s )
+
+Template based postprocessing finished at: 01:17 AM Wednesday, 17. May 2023
+----------------------------------------------------------------------------------------

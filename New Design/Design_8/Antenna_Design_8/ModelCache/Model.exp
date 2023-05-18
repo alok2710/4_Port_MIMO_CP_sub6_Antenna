@@ -1,0 +1,23 @@
+@CACHEFILEVERSION 2
+@DOUBLE
+-a
+-6
+-l
+-10
+-xd
+-20
+a
+6
+l
+10
+l+.5#
+10.5
+xd
+20
+xd+.5#
+20.5
+yd
+1
+yd+.5#
+1.5
+@LONG
