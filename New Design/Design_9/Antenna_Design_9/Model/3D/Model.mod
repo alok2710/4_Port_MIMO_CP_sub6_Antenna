@@ -924,214 +924,76 @@ Solid.Delete "component1:Radiating_cut_3"
 '[VERSION]2016.1|25.0.2|20160226[/VERSION]
 WCS.ActivateWCS "global"
 
-'@ transform: mirror component1:Radiating_cut
-
-'[VERSION]2016.1|25.0.2|20160226[/VERSION]
-With Transform 
-     .Reset 
-     .Name "component1:Radiating_cut" 
-     .Origin "Free" 
-     .Center "0", "0", "0" 
-     .PlaneNormal "90", "0", "0" 
-     .MultipleObjects "True" 
-     .GroupObjects "False" 
-     .Repetitions "1" 
-     .MultipleSelection "False" 
-     .Destination "" 
-     .Material "" 
-     .Transform "Shape", "Mirror" 
-End With
-
-'@ transform: mirror component1:Radiating_cut
-
-'[VERSION]2016.1|25.0.2|20160226[/VERSION]
-With Transform 
-     .Reset 
-     .Name "component1:Radiating_cut" 
-     .Origin "Free" 
-     .Center "0", "0", "0" 
-     .PlaneNormal "0", "90", "0" 
-     .MultipleObjects "True" 
-     .GroupObjects "False" 
-     .Repetitions "1" 
-     .MultipleSelection "False" 
-     .Destination "" 
-     .Material "" 
-     .Transform "Shape", "Mirror" 
-End With
-
-'@ transform: mirror component1:Radiating_cut
-
-'[VERSION]2016.1|25.0.2|20160226[/VERSION]
-With Transform 
-     .Reset 
-     .Name "component1:Radiating_cut" 
-     .Origin "Free" 
-     .Center "0", "0", "0" 
-     .PlaneNormal "0", "0", "180" 
-     .MultipleObjects "True" 
-     .GroupObjects "False" 
-     .Repetitions "1" 
-     .MultipleSelection "False" 
-     .Destination "" 
-     .Material "" 
-     .Transform "Shape", "Mirror" 
-End With
-
-'@ delete shape: component1:Radiating_cut_3
-
-'[VERSION]2016.1|25.0.2|20160226[/VERSION]
-Solid.Delete "component1:Radiating_cut_3"
-
-'@ transform: rotate component1:Radiating_cut
-
-'[VERSION]2016.1|25.0.2|20160226[/VERSION]
-With Transform 
-     .Reset 
-     .Name "component1:Radiating_cut" 
-     .Origin "Free" 
-     .Center "0", "0", "0" 
-     .Angle "0", "0", "180" 
-     .MultipleObjects "True" 
-     .GroupObjects "False" 
-     .Repetitions "1" 
-     .MultipleSelection "False" 
-     .Destination "" 
-     .Material "" 
-     .Transform "Shape", "Rotate" 
-End With
-
-'@ boolean subtract shapes: component1:radiating_patch, component1:Radiating_cut
-
-'[VERSION]2016.1|25.0.2|20160226[/VERSION]
-Solid.Subtract "component1:radiating_patch", "component1:Radiating_cut"
-
-'@ boolean subtract shapes: component1:radiating_patch, component1:Radiating_cut_1
-
-'[VERSION]2016.1|25.0.2|20160226[/VERSION]
-Solid.Subtract "component1:radiating_patch", "component1:Radiating_cut_1"
-
-'@ boolean subtract shapes: component1:radiating_patch, component1:Radiating_cut_2
-
-'[VERSION]2016.1|25.0.2|20160226[/VERSION]
-Solid.Subtract "component1:radiating_patch", "component1:Radiating_cut_2"
-
-'@ boolean subtract shapes: component1:radiating_patch, component1:Radiating_cut_3
-
-'[VERSION]2016.1|25.0.2|20160226[/VERSION]
-Solid.Subtract "component1:radiating_patch", "component1:Radiating_cut_3" 
-
 '@ activate local coordinates
 
 '[VERSION]2016.1|25.0.2|20160226[/VERSION]
 WCS.ActivateWCS "local"
 
-
 '@ move wcs
 
 '[VERSION]2016.1|25.0.2|20160226[/VERSION]
-WCS.MoveWCS "local", "0.0", "-7", "0.0" 
-
-
-'@ define brick: component1:cut
-
-'[VERSION]2016.1|25.0.2|20160226[/VERSION]
-With Brick
-     .Reset 
-     .Name "cut" 
-     .Component "component1" 
-     .Material "Copper (annealed)" 
-     .Xrange "-1.5", "0" 
-     .Yrange "0", "2" 
-     .Zrange "-.035", "0" 
-     .Create
-End With
-
+WCS.MoveWCS "local", "0.0", "-7", "0.0"
 
 '@ activate global coordinates
 
 '[VERSION]2016.1|25.0.2|20160226[/VERSION]
 WCS.ActivateWCS "global"
 
-
-'@ transform: mirror component1:cut
-
-'[VERSION]2016.1|25.0.2|20160226[/VERSION]
-With Transform 
-     .Reset 
-     .Name "component1:cut" 
-     .Origin "Free" 
-     .Center "0", "0", "0" 
-     .PlaneNormal "90", "0", "0" 
-     .MultipleObjects "True" 
-     .GroupObjects "False" 
-     .Repetitions "1" 
-     .MultipleSelection "False" 
-     .Destination "" 
-     .Material "" 
-     .Transform "Shape", "Mirror" 
-End With 
-
-
-'@ transform: mirror component1:cut
+'@ pick edge
 
 '[VERSION]2016.1|25.0.2|20160226[/VERSION]
-With Transform 
-     .Reset 
-     .Name "component1:cut" 
-     .Origin "Free" 
-     .Center "0", "0", "0" 
-     .PlaneNormal "0", "90", "0" 
-     .MultipleObjects "True" 
-     .GroupObjects "False" 
-     .Repetitions "1" 
-     .MultipleSelection "False" 
-     .Destination "" 
-     .Material "" 
-     .Transform "Shape", "Mirror" 
-End With 
+Pick.PickEdgeFromId "component1:radiating_patch", "85", "57"
 
-
-'@ transform: rotate component1:cut
+'@ delete shape: component1:Radiating_cut
 
 '[VERSION]2016.1|25.0.2|20160226[/VERSION]
-With Transform 
-     .Reset 
-     .Name "component1:cut" 
-     .Origin "Free" 
-     .Center "0", "0", "0" 
-     .Angle "0", "0", "180" 
-     .MultipleObjects "True" 
-     .GroupObjects "False" 
-     .Repetitions "1" 
-     .MultipleSelection "False" 
-     .Destination "" 
-     .Material "" 
-     .Transform "Shape", "Rotate" 
-End With 
+Solid.Delete "component1:Radiating_cut"
 
-
-'@ boolean subtract shapes: component1:Element_1, component1:cut
+'@ pick edge
 
 '[VERSION]2016.1|25.0.2|20160226[/VERSION]
-Solid.Subtract "component1:Element_1", "component1:cut" 
+Pick.PickEdgeFromId "component1:radiating_patch", "37", "25"
 
-
-'@ boolean subtract shapes: component1:Element_1, component1:cut_1
-
-'[VERSION]2016.1|25.0.2|20160226[/VERSION]
-Solid.Subtract "component1:Element_1", "component1:cut_1" 
-
-
-'@ boolean subtract shapes: component1:Element_1, component1:cut_2
+'@ define distance dimension by picks
 
 '[VERSION]2016.1|25.0.2|20160226[/VERSION]
-Solid.Subtract "component1:Element_1", "component1:cut_2" 
+With Dimension
+    .Reset
+    .UsePicks True
+    .SetType "Distance"
+    .SetID "0"
+    .SetOrientation "Smart Mode"
+    .SetDistance "2.579293"
+    .SetViewVector "0.000000", "-0.000032", "-1.000000"
+    .Create
+End With
+Pick.ClearAllPicks
 
-
-'@ boolean subtract shapes: component1:Element_1, component1:cut_3
+'@ delete dimension 0
 
 '[VERSION]2016.1|25.0.2|20160226[/VERSION]
-Solid.Subtract "component1:Element_1", "component1:cut_3" 
+With Dimension
+    .RemoveDimension "0"
+End With
+
+'@ define time domain solver parameters
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Mesh.SetCreator "High Frequency" 
+
+With Solver 
+     .Method "Hexahedral"
+     .CalculationType "TD-S"
+     .StimulationPort "1"
+     .StimulationMode "1"
+     .SteadyStateLimit "-30.0"
+     .MeshAdaption "False"
+     .CalculateModesOnly "False"
+     .SParaSymmetry "False"
+     .StoreTDResultsInCache  "False"
+     .FullDeembedding "False"
+     .SuperimposePLWExcitation "False"
+     .UseSensitivityAnalysis "False"
+End With
 
 

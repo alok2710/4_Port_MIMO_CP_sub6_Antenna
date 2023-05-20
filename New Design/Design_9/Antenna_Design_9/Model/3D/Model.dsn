@@ -11,9 +11,9 @@ FloquetPortModes:
 Terminals:
 TerminalToReferenceTable:
 Number of frequency-points: 4
-Fmin: 1.000000e+09
-Fmax: 6.000000e+09
-Fscale: 1.000000e+09
+Fmin: 1.000000e+009
+Fmax: 6.000000e+009
+Fscale: 1.000000e+009
 
 
 

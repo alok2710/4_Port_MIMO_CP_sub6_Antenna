@@ -1,0 +1,19 @@
+[Version]
+2
+[Author]
+Alok Yadav
+[Mesh Cells]
+
+[Mesh Type]
+Hexahedral
+[Last Problem Type]
+High Frequency
+[Last Solver Type]
+HF Time Domain
+[Last Solver Type Abb]
+t
+[Results]
+Unavailable
+[Modeler Unique ID]
+5:antenna_design_11.cst?bb41b9e38f803f14c8d1c376c7d89f74?26510:numberofparameters=5:port=1>mode=1>zre=0>zim=0?port=2>mode=1>zre=0>zim=0?port=3>mode=1>zre=0>zim=0?port=4>mode=1>zre=0>zim=0:::a?l?s?xd?yd
+[Comment]

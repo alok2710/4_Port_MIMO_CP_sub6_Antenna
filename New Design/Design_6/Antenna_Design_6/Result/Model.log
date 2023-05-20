@@ -20,7 +20,7 @@ neglecting loss terms.
 --------------------------------------------------------------------------------
   -------------------------------- F-Calc 3.5 --------------------------------
   Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
-  1      1      QTEM        205           0             48.1          ---
+  1      1      QTEM        205           0             48.7          ---
   ----------------------------------------------------------------------------
 
 *** Warning ***
@@ -37,30 +37,20 @@ Pass 1 successfully completed.
 --------------------------------------------------------------------------------
   -------------------------------- F-Calc 3.5 --------------------------------
   Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
-  1      1      QTEM        207           0.0249        48.7          ---
+  1      1      QTEM        208           0.24          48.9          ---
   ----------------------------------------------------------------------------
 
-Pass 2 successfully completed. Delta (Line Imp.): 1.266230%
+Pass 2 successfully completed. Delta (Line Imp.): 0.536043%
 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
   -------------------------------- F-Calc 3.5 --------------------------------
   Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
-  1      1      QTEM        221           0.0958        49.1          ---
+  1      1      QTEM        237           20.8          49.2          ---
   ----------------------------------------------------------------------------
 
-Pass 3 successfully completed. Delta (Line Imp.): 0.786604%
-
---------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------
-  -------------------------------- F-Calc 3.5 --------------------------------
-  Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
-  1      1      QTEM        228           0.092         49.2          ---
-  ----------------------------------------------------------------------------
-
-Pass 4 successfully completed. Delta (Line Imp.): 0.335383%
+Pass 3 successfully completed. Delta (Line Imp.): 0.486215%
 Mode calculation for port 2:
 
 --------------------------------------------------------------------------------
@@ -78,7 +68,7 @@ neglecting loss terms.
 --------------------------------------------------------------------------------
   -------------------------------- F-Calc 3.5 --------------------------------
   Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
-  2      1      QTEM        205           0             48.1          ---
+  2      1      QTEM        205           0             48.7          ---
   ----------------------------------------------------------------------------
 
 *** Warning ***
@@ -95,30 +85,20 @@ Pass 1 successfully completed.
 --------------------------------------------------------------------------------
   -------------------------------- F-Calc 3.5 --------------------------------
   Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
-  2      1      QTEM        207           0.0249        48.7          ---
+  2      1      QTEM        208           0.24          48.9          ---
   ----------------------------------------------------------------------------
 
-Pass 2 successfully completed. Delta (Line Imp.): 1.266230%
+Pass 2 successfully completed. Delta (Line Imp.): 0.536043%
 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
   -------------------------------- F-Calc 3.5 --------------------------------
   Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
-  2      1      QTEM        221           0.0958        49.1          ---
+  2      1      QTEM        237           20.8          49.2          ---
   ----------------------------------------------------------------------------
 
-Pass 3 successfully completed. Delta (Line Imp.): 0.786604%
-
---------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------
-  -------------------------------- F-Calc 3.5 --------------------------------
-  Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
-  2      1      QTEM        228           0.092         49.2          ---
-  ----------------------------------------------------------------------------
-
-Pass 4 successfully completed. Delta (Line Imp.): 0.335383%
+Pass 3 successfully completed. Delta (Line Imp.): 0.486215%
 Mode calculation for port 3:
 
 --------------------------------------------------------------------------------
@@ -136,7 +116,7 @@ neglecting loss terms.
 --------------------------------------------------------------------------------
   -------------------------------- F-Calc 3.5 --------------------------------
   Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
-  3      1      QTEM        205           0             48.1          ---
+  3      1      QTEM        205           0             48.7          ---
   ----------------------------------------------------------------------------
 
 *** Warning ***
@@ -153,30 +133,20 @@ Pass 1 successfully completed.
 --------------------------------------------------------------------------------
   -------------------------------- F-Calc 3.5 --------------------------------
   Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
-  3      1      QTEM        207           0.0249        48.7          ---
+  3      1      QTEM        208           0.24          48.9          ---
   ----------------------------------------------------------------------------
 
-Pass 2 successfully completed. Delta (Line Imp.): 1.266230%
+Pass 2 successfully completed. Delta (Line Imp.): 0.536043%
 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
   -------------------------------- F-Calc 3.5 --------------------------------
   Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
-  3      1      QTEM        221           0.0958        49.1          ---
+  3      1      QTEM        237           20.8          49.2          ---
   ----------------------------------------------------------------------------
 
-Pass 3 successfully completed. Delta (Line Imp.): 0.786604%
-
---------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------
-  -------------------------------- F-Calc 3.5 --------------------------------
-  Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
-  3      1      QTEM        228           0.092         49.2          ---
-  ----------------------------------------------------------------------------
-
-Pass 4 successfully completed. Delta (Line Imp.): 0.335383%
+Pass 3 successfully completed. Delta (Line Imp.): 0.486215%
 Mode calculation for port 4:
 
 --------------------------------------------------------------------------------
@@ -194,7 +164,7 @@ neglecting loss terms.
 --------------------------------------------------------------------------------
   -------------------------------- F-Calc 3.5 --------------------------------
   Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
-  4      1      QTEM        205           0             48.1          ---
+  4      1      QTEM        205           0             48.7          ---
   ----------------------------------------------------------------------------
 
 *** Warning ***
@@ -211,35 +181,25 @@ Pass 1 successfully completed.
 --------------------------------------------------------------------------------
   -------------------------------- F-Calc 3.5 --------------------------------
   Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
-  4      1      QTEM        207           0.0249        48.7          ---
+  4      1      QTEM        208           0.24          48.9          ---
   ----------------------------------------------------------------------------
 
-Pass 2 successfully completed. Delta (Line Imp.): 1.266230%
+Pass 2 successfully completed. Delta (Line Imp.): 0.536043%
 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
   -------------------------------- F-Calc 3.5 --------------------------------
   Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
-  4      1      QTEM        221           0.0958        49.1          ---
+  4      1      QTEM        237           20.8          49.2          ---
   ----------------------------------------------------------------------------
 
-Pass 3 successfully completed. Delta (Line Imp.): 0.786604%
-
---------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------
-  -------------------------------- F-Calc 3.5 --------------------------------
-  Port   Mode   Type        Z-Wave        Z-Wave-Sigma  Z-Line        F-Cutoff
-  4      1      QTEM        228           0.092         49.2          ---
-  ----------------------------------------------------------------------------
-
-Pass 4 successfully completed. Delta (Line Imp.): 0.335383%
+Pass 3 successfully completed. Delta (Line Imp.): 0.486215%
 Adaptive port meshing finished. 
 
 --------------------------------------------------------------------------------
 
-Solver started at: 01:40 PM Thursday, 18. May 2023
+Solver started at: 12:30 AM Friday, 19. May 2023
 
   Module:  Time Domain: S-Parameter (Win 64)
   Version: 2016.1 Release from 2016-02-26 (change 422839)
@@ -271,7 +231,6 @@ Mesh statistics:
       Number of parallel working threads: 2
       Number of calculation domains used: 2
 
-   Used point accuracy enhancement value: 73.00%.
    PBA fill limit: 98.44% (inverse)
 
 
@@ -369,9 +328,9 @@ increase the number of modes or decrease the upper frequency limit. More...
 --------------------------------------------------------------------------------
 Field update statistics:
 
-  Number of components in total: 	740613
-  Number of lossy metal components:	3664
-  Number of disp. elements:		19434
+  Number of components in total: 	740907
+  Number of lossy metal components:	3576
+  Number of disp. elements:		19502
 
 Subcycling state:      Automatically deactivated
 
@@ -400,8 +359,8 @@ Frequency domain results normalized to default signal.
                       Peak memory used (kB)         Free physical memory (kB) 
                                                     At begin     Minimum      
   ----------------------------------------------------------------------------
-  Matrices calc.      135028                        3063936      2936552      
-  Solver run total    154248                        3110480      2942780      
+  Matrices calc.      142568                        2547480      2451844      
+  Solver run total    156004                        2585512      2441108      
   ----------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
@@ -413,37 +372,37 @@ Solver Statistics:
      Number of CPU threads:             4
      Hardware info:                  	Hardware acceleration not activated
 
-  Number of mesh cells:             	119232
+  Number of mesh cells:             	119280
   Excitation duration:              	1.42181950e+000 ns 
-  Calculation time for excitation:  	7      	s
-  Number of calculated pulse widths:	3.6416 
+  Calculation time for excitation:  	8      	s
+  Number of calculated pulse widths:	3.98838 
   Steady state accuracy limit:      	-30	dB 
-  Simulated number of time steps:   	5130   
-  Maximum number of time steps:     	28174  
+  Simulated number of time steps:   	6237   
+  Maximum number of time steps:     	31275  
   Time step width:
-     without subcycles:             	1.00929720e-003 ns
-     used:                          	1.00929720e-003 ns
+     without subcycles:             	9.09212329e-004 ns
+     used:                          	9.09212329e-004 ns
 
-  Matrix calculation time:          	20     	s
-  Solver setup time:                	6      	s
-  Solver loop time:                 	26     	s
-  Solver post processing time:      	2      	s
-  Processing of broadband farfields:	4      	s
+  Matrix calculation time:          	12     	s
+  Solver setup time:                	4      	s
+  Solver loop time:                 	31     	s
+  Solver post processing time:      	0      	s
+  Processing of broadband farfields:	8      	s
                                     	------------
-  Total solver time:                	58     	s
+  Total solver time:                	55     	s
 
 --------------------------------------------------------------------------------
 
-  Adaptive port meshing time:       	130    	s  ( = 0 h, 2 m, 10 s )
-  Total solver time (all cycles):   	59     	s
+  Adaptive port meshing time:       	43     	s
+  Total solver time (all cycles):   	56     	s
                                     	------------
-  Total simulation time:            	189    	s  ( = 0 h, 3 m, 9 s )
+  Total simulation time:            	99     	s  ( = 0 h, 1 m, 39 s )
 
 --------------------------------------------------------------------------------
-Solver finished at: 01:41 PM Thursday, 18. May 2023
+Solver finished at: 12:31 AM Friday, 19. May 2023
 
 
 --------------------------------------------------------------------------------
-Creating parametric 1D results for Run ID 1
+Creating parametric 1D results for Run ID 2
 
 --------------------------------------------------------------------------------
