@@ -1,0 +1,1624 @@
+'# MWS Version: Version 2016.1 - Feb 26 2016 - ACIS 25.0.2 -
+
+'# length = mm
+'# frequency = GHz
+'# time = ns
+'# frequency range: fmin = 1 fmax = 6
+'# created = '[VERSION]2016.1|25.0.2|20160226[/VERSION]
+
+
+'@ use template: Antenna - Waveguide_7.cfg
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+'set the units
+With Units
+    .Geometry "mm"
+    .Frequency "GHz"
+    .Voltage "V"
+    .Resistance "Ohm"
+    .Inductance "NanoH"
+    .TemperatureUnit  "Kelvin"
+    .Time "ns"
+    .Current "A"
+    .Conductance "Siemens"
+    .Capacitance "PikoF"
+End With
+'----------------------------------------------------------------------------
+Plot.DrawBox True
+With Background
+     .Type "Normal"
+     .Epsilon "1.0"
+     .Mue "1.0"
+     .XminSpace "0.0"
+     .XmaxSpace "0.0"
+     .YminSpace "0.0"
+     .YmaxSpace "0.0"
+     .ZminSpace "0.0"
+     .ZmaxSpace "0.0"
+End With
+With Boundary
+     .Xmin "expanded open"
+     .Xmax "expanded open"
+     .Ymin "expanded open"
+     .Ymax "expanded open"
+     .Zmin "expanded open"
+     .Zmax "expanded open"
+     .Xsymmetry "none"
+     .Ysymmetry "none"
+     .Zsymmetry "none"
+End With
+' switch on FD-TET setting for accurate farfields
+FDSolver.ExtrudeOpenBC "True"
+Mesh.FPBAAvoidNonRegUnite "True"
+Mesh.ConsiderSpaceForLowerMeshLimit "False"
+Mesh.MinimumStepNumber "5"
+With MeshSettings
+     .SetMeshType "Hex"
+     .Set "RatioLimitGeometry", "20"
+End With
+With MeshSettings
+     .SetMeshType "HexTLM"
+     .Set "RatioLimitGeometry", "20"
+End With
+PostProcess1D.ActivateOperation "vswr", "true"
+PostProcess1D.ActivateOperation "yz-matrices", "true"
+'----------------------------------------------------------------------------
+With MeshSettings
+     .SetMeshType "Hex"
+     .Set "Version", 1%
+End With
+With Mesh
+     .MeshType "PBA"
+End With
+'set the solver type
+ChangeSolverType("HF Time Domain")
+
+'@ define material: FR-4 (lossy)
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Material
+     .Reset
+     .Name "FR-4 (lossy)"
+     .Folder ""
+.FrqType "all" 
+.Type "Normal" 
+.SetMaterialUnit "GHz", "mm"
+.Epsilon "4.3" 
+.Mue "1.0" 
+.Kappa "0.0" 
+.TanD "0.025" 
+.TanDFreq "10.0" 
+.TanDGiven "True" 
+.TanDModel "ConstTanD" 
+.KappaM "0.0" 
+.TanDM "0.0" 
+.TanDMFreq "0.0" 
+.TanDMGiven "False" 
+.TanDMModel "ConstKappa" 
+.DispModelEps "None" 
+.DispModelMue "None" 
+.DispersiveFittingSchemeEps "General 1st" 
+.DispersiveFittingSchemeMue "General 1st" 
+.UseGeneralDispersionEps "False" 
+.UseGeneralDispersionMue "False" 
+.Rho "0.0" 
+.ThermalType "Normal" 
+.ThermalConductivity "0.3" 
+.SetActiveMaterial "all" 
+.Colour "0.94", "0.82", "0.76" 
+.Wireframe "False" 
+.Transparency "0" 
+.Create
+End With
+
+'@ new component: component1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Component.New "component1"
+
+'@ define brick: component1:solid1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Brick
+     .Reset 
+     .Name "solid1" 
+     .Component "component1" 
+     .Material "FR-4 (lossy)" 
+     .Xrange "-s/2", "s/2" 
+     .Yrange "-s/2", "s/2" 
+     .Zrange "0", "1.6" 
+     .Create
+End With
+
+'@ paste structure data: 1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Material 
+     .Reset 
+     .Name "Copper (annealed)" 
+     .Folder "" 
+     .FrqType "static"
+     .Type "Normal"
+     .MaterialUnit "Frequency", "Hz"
+     .MaterialUnit "Geometry", "mm"
+     .MaterialUnit "Time", "s"
+     .Epsilon "1"
+     .Mue "1.0"
+     .Sigma "5.8e+007"
+     .TanD "0.0"
+     .TanDFreq "0.0"
+     .TanDGiven "False"
+     .TanDModel "ConstTanD"
+     .EnableUserConstTanDModelOrderEps "False"
+     .ConstTanDModelOrderEps "1"
+     .SetElParametricConductivity "False"
+     .ReferenceCoordSystem "Global"
+     .CoordSystemType "Cartesian"
+     .SigmaM "0"
+     .TanDM "0.0"
+     .TanDMFreq "0.0"
+     .TanDMGiven "False"
+     .TanDMModel "ConstTanD"
+     .EnableUserConstTanDModelOrderMue "False"
+     .ConstTanDModelOrderMue "1"
+     .SetMagParametricConductivity "False"
+     .DispModelEps  "None"
+     .DispModelMue "None"
+     .DispersiveFittingSchemeEps "Nth Order"
+     .MaximalOrderNthModelFitEps "10"
+     .ErrorLimitNthModelFitEps "0.1"
+     .UseOnlyDataInSimFreqRangeNthModelEps "False"
+     .DispersiveFittingSchemeMue "Nth Order"
+     .MaximalOrderNthModelFitMue "10"
+     .ErrorLimitNthModelFitMue "0.1"
+     .UseOnlyDataInSimFreqRangeNthModelMue "False"
+     .UseGeneralDispersionEps "False"
+     .UseGeneralDispersionMue "False"
+     .NLAnisotropy "False"
+     .NLAStackingFactor "1"
+     .NLADirectionX "1"
+     .NLADirectionY "0"
+     .NLADirectionZ "0"
+     .FrqType "all"
+     .Type "Lossy metal"
+     .MaterialUnit "Frequency", "GHz"
+     .MaterialUnit "Geometry", "mm"
+     .MaterialUnit "Time", "s"
+     .Mue "1.0"
+     .Sigma "5.8e+007"
+     .ReferenceCoordSystem "Global"
+     .CoordSystemType "Cartesian"
+     .NLAnisotropy "False"
+     .NLAStackingFactor "1"
+     .NLADirectionX "1"
+     .NLADirectionY "0"
+     .NLADirectionZ "0"
+     .Rho "8930.0"
+     .ThermalType "Normal"
+     .ThermalConductivity "401.0"
+     .HeatCapacity "0.39"
+     .DynamicViscosity "0"
+     .Emissivity "0"
+     .MetabolicRate "0"
+     .BloodFlow "0"
+     .VoxelConvection "0"
+     .MechanicsType "Isotropic"
+     .YoungsModulus "120"
+     .PoissonsRatio "0.33"
+     .ThermalExpansionRate "17"
+     .Colour "1", "1", "0" 
+     .Wireframe "False" 
+     .Reflection "False" 
+     .Allowoutline "True" 
+     .Transparentoutline "False" 
+     .Transparency "0" 
+     .Create
+End With 
+With SAT 
+     .Reset 
+     .FileName "*1.cby" 
+     .SubProjectScaleFactor "0.001" 
+     .ImportToActiveCoordinateSystem "True" 
+     .ScaleToUnit "True" 
+     .Curves "False" 
+     .Read 
+End With
+
+'@ transform: translate component1:Element_1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:Element_1" 
+     .Vector "2.5", "-2.5", "0" 
+     .UsePickedPoints "False" 
+     .InvertPickedPoints "False" 
+     .MultipleObjects "False" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Transform "Shape", "Translate" 
+End With
+
+'@ activate local coordinates
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.ActivateWCS "local"
+
+'@ move wcs
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.MoveWCS "local", "30", "-30", "0.0"
+
+'@ move wcs
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.MoveWCS "local", "-12.5", "5", "0.0"
+
+'@ define brick: component1:solid2
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Brick
+     .Reset 
+     .Name "solid2" 
+     .Component "component1" 
+     .Material "Vacuum" 
+     .Xrange "0", "9.5" 
+     .Yrange "0", "1" 
+     .Zrange "-.035", "0" 
+     .Create
+End With
+
+'@ boolean subtract shapes: component1:Element_1, component1:solid2
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Subtract "component1:Element_1", "component1:solid2"
+
+'@ move wcs
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.MoveWCS "local", "0.0", "9.5", "0.0"
+
+'@ define brick: component1:solid2
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Brick
+     .Reset 
+     .Name "solid2" 
+     .Component "component1" 
+     .Material "Copper (annealed)" 
+     .Xrange "0", "9.5" 
+     .Yrange "0", "2" 
+     .Zrange "-.035", "0" 
+     .Create
+End With
+
+'@ boolean add shapes: component1:Element_1, component1:solid2
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Add "component1:Element_1", "component1:solid2"
+
+'@ activate global coordinates
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.ActivateWCS "global"
+
+'@ transform: mirror component1:Element_1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:Element_1" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .PlaneNormal "90", "0", "0" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Mirror" 
+End With
+
+'@ transform: mirror component1:Element_1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:Element_1" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .PlaneNormal "0", "90", "0" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Mirror" 
+End With
+
+'@ transform: rotate component1:Element_1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:Element_1" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .Angle "0", "0", "180" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Rotate" 
+End With
+
+'@ pick edge
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Pick.PickEdgeFromId "component1:Element_1", "140", "88"
+
+'@ boolean add shapes: component1:Element_1, component1:Element_1_1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Add "component1:Element_1", "component1:Element_1_1"
+
+'@ boolean add shapes: component1:Element_1, component1:Element_1_2
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Add "component1:Element_1", "component1:Element_1_2"
+
+'@ boolean add shapes: component1:Element_1, component1:Element_1_3
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Add "component1:Element_1", "component1:Element_1_3"
+
+'@ activate local coordinates
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.ActivateWCS "local"
+
+'@ move wcs
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.MoveWCS "local", "9.5", "-9.5", "0.0"
+
+'@ move wcs
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.MoveWCS "local", "3", "-5", "0.0"
+
+'@ move wcs
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.MoveWCS "local", "-60", "0.0", "0.0"
+
+'@ move wcs
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.MoveWCS "local", "12.5", "0.0", "0.0"
+
+'@ define brick: component1:radiating_patch
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Brick
+     .Reset 
+     .Name "radiating_patch" 
+     .Component "component1" 
+     .Material "Copper (annealed)" 
+     .Xrange "-1.5", "1.5" 
+     .Yrange "0", "12" 
+     .Zrange "1.6", "1.635" 
+     .Create
+End With
+
+'@ activate global coordinates
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.ActivateWCS "global"
+
+'@ transform: mirror component1:radiating_patch
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:radiating_patch" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .PlaneNormal "90", "0", "0" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Mirror" 
+End With
+
+'@ transform: mirror component1:radiating_patch
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:radiating_patch" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .PlaneNormal "0", "90", "0" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Mirror" 
+End With
+
+'@ transform: rotate component1:radiating_patch
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:radiating_patch" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .Angle "0", "0", "180" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Rotate" 
+End With
+
+'@ boolean add shapes: component1:radiating_patch, component1:radiating_patch_1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Add "component1:radiating_patch", "component1:radiating_patch_1"
+
+'@ boolean add shapes: component1:radiating_patch, component1:radiating_patch_2
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Add "component1:radiating_patch", "component1:radiating_patch_2"
+
+'@ boolean add shapes: component1:radiating_patch, component1:radiating_patch_3
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Add "component1:radiating_patch", "component1:radiating_patch_3"
+
+'@ pick face
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Pick.PickFaceFromId "component1:radiating_patch", "3"
+
+'@ define port:1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+' Port constructed by macro Calculate -> Calculate port extension coefficient
+
+
+With Port
+  .Reset
+  .PortNumber "1"
+  .NumberOfModes "1"
+  .AdjustPolarization False
+  .PolarizationAngle "0.0"
+  .ReferencePlaneDistance "0"
+  .TextSize "50"
+  .Coordinates "Picks"
+  .Orientation "Positive"
+  .PortOnBound "True"
+  .ClipPickedPortToBound "False"
+  .XrangeAdd "1.6*7.1", "1.6*7.1"
+  .YrangeAdd "0", "0"
+  .ZrangeAdd "1.6", "1.6*7.1"
+  .Shield "PEC"
+  .SingleEnded "False"
+  .Create
+End With
+
+'@ pick face
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Pick.PickFaceFromId "component1:radiating_patch", "9"
+
+'@ define port:2
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+' Port constructed by macro Calculate -> Calculate port extension coefficient
+
+
+With Port
+  .Reset
+  .PortNumber "2"
+  .NumberOfModes "1"
+  .AdjustPolarization False
+  .PolarizationAngle "0.0"
+  .ReferencePlaneDistance "0"
+  .TextSize "50"
+  .Coordinates "Picks"
+  .Orientation "Positive"
+  .PortOnBound "True"
+  .ClipPickedPortToBound "False"
+  .XrangeAdd "1.6*7.1", "1.6*7.1"
+  .YrangeAdd "0", "0"
+  .ZrangeAdd "1.6", "1.6*7.1"
+  .Shield "PEC"
+  .SingleEnded "False"
+  .Create
+End With
+
+'@ pick face
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Pick.PickFaceFromId "component1:radiating_patch", "15"
+
+'@ define port:3
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+' Port constructed by macro Calculate -> Calculate port extension coefficient
+
+
+With Port
+  .Reset
+  .PortNumber "3"
+  .NumberOfModes "1"
+  .AdjustPolarization False
+  .PolarizationAngle "0.0"
+  .ReferencePlaneDistance "0"
+  .TextSize "50"
+  .Coordinates "Picks"
+  .Orientation "Positive"
+  .PortOnBound "True"
+  .ClipPickedPortToBound "False"
+  .XrangeAdd "1.6*7.1", "1.6*7.1"
+  .YrangeAdd "0", "0"
+  .ZrangeAdd "1.6", "1.6*7.1"
+  .Shield "PEC"
+  .SingleEnded "False"
+  .Create
+End With
+
+'@ pick face
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Pick.PickFaceFromId "component1:radiating_patch", "21"
+
+'@ define port:4
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+' Port constructed by macro Calculate -> Calculate port extension coefficient
+
+
+With Port
+  .Reset
+  .PortNumber "4"
+  .NumberOfModes "1"
+  .AdjustPolarization False
+  .PolarizationAngle "0.0"
+  .ReferencePlaneDistance "0"
+  .TextSize "50"
+  .Coordinates "Picks"
+  .Orientation "Positive"
+  .PortOnBound "True"
+  .ClipPickedPortToBound "False"
+  .XrangeAdd "1.6*7.1", "1.6*7.1"
+  .YrangeAdd "0", "0"
+  .ZrangeAdd "1.6", "1.6*7.1"
+  .Shield "PEC"
+  .SingleEnded "False"
+  .Create
+End With
+
+'@ define frequency range
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solver.FrequencyRange "1", "6"
+
+'@ define time domain solver parameters
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Mesh.SetCreator "High Frequency" 
+With Solver 
+     .Method "Hexahedral"
+     .CalculationType "TD-S"
+     .StimulationPort "1"
+     .StimulationMode "1"
+     .SteadyStateLimit "-30.0"
+     .MeshAdaption "False"
+     .CalculateModesOnly "False"
+     .SParaSymmetry "False"
+     .StoreTDResultsInCache  "False"
+     .FullDeembedding "False"
+     .SuperimposePLWExcitation "False"
+     .UseSensitivityAnalysis "False"
+End With
+
+'@ define brick: component1:Decoupling
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Brick
+     .Reset 
+     .Name "Decoupling" 
+     .Component "component1" 
+     .Material "Copper (annealed)" 
+     .Xrange "-.25", ".25" 
+     .Yrange "-l", "l" 
+     .Zrange "-.035", "0" 
+     .Create
+End With
+
+'@ define brick: component1:vertical_decoupler
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Brick
+     .Reset 
+     .Name "vertical_decoupler" 
+     .Component "component1" 
+     .Material "Copper (annealed)" 
+     .Xrange "-a", "a" 
+     .Yrange "l", "l+.5" 
+     .Zrange "-.035", "0" 
+     .Create
+End With
+
+'@ transform: mirror component1:vertical_decoupler
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:vertical_decoupler" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .PlaneNormal "0", "90", "0" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Mirror" 
+End With
+
+'@ boolean add shapes: component1:vertical_decoupler, component1:vertical_decoupler_1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Add "component1:vertical_decoupler", "component1:vertical_decoupler_1"
+
+'@ boolean add shapes: component1:Decoupling, component1:vertical_decoupler
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Add "component1:Decoupling", "component1:vertical_decoupler"
+
+'@ define brick: component1:horizontal_decoupler
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Brick
+     .Reset 
+     .Name "horizontal_decoupler" 
+     .Component "component1" 
+     .Material "Copper (annealed)" 
+     .Xrange "-xd", "xd" 
+     .Yrange "yd", "yd+.5" 
+     .Zrange "-.035", "0" 
+     .Create
+End With
+
+'@ transform: mirror component1:horizontal_decoupler
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:horizontal_decoupler" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .PlaneNormal "0", "90", "0" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Mirror" 
+End With
+
+'@ define brick: component1:horizonatl_decoupler_vertical
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Brick
+     .Reset 
+     .Name "horizonatl_decoupler_vertical" 
+     .Component "component1" 
+     .Material "Copper (annealed)" 
+     .Xrange "xd", "xd+.5" 
+     .Yrange "-5", "5" 
+     .Zrange "-.035", "0" 
+     .Create
+End With
+
+'@ transform: mirror component1:horizonatl_decoupler_vertical
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:horizonatl_decoupler_vertical" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .PlaneNormal "90", "0", "0" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Mirror" 
+End With
+
+'@ boolean add shapes: component1:horizonatl_decoupler_vertical, component1:horizonatl_decoupler_vertical_1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Add "component1:horizonatl_decoupler_vertical", "component1:horizonatl_decoupler_vertical_1"
+
+'@ boolean add shapes: component1:horizonatl_decoupler_vertical, component1:horizontal_decoupler
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Add "component1:horizonatl_decoupler_vertical", "component1:horizontal_decoupler"
+
+'@ boolean add shapes: component1:horizonatl_decoupler_vertical, component1:horizontal_decoupler_1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Add "component1:horizonatl_decoupler_vertical", "component1:horizontal_decoupler_1"
+
+'@ rename block: component1:Decoupling to: component1:vertical_decoupler
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Rename "component1:Decoupling", "vertical_decoupler"
+
+'@ rename block: component1:solid1 to: component1:Substrate
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Rename "component1:solid1", "Substrate"
+
+'@ boolean add shapes: component1:Element_1, component1:horizonatl_decoupler_vertical
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Add "component1:Element_1", "component1:horizonatl_decoupler_vertical"
+
+'@ boolean add shapes: component1:Element_1, component1:vertical_decoupler
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Add "component1:Element_1", "component1:vertical_decoupler"
+
+'@ define farfield monitor: farfield (broadband)
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Monitor 
+     .Reset 
+     .Name "farfield (broadband)" 
+     .Domain "Time" 
+     .Accuracy "1e-3" 
+     .FrequencySamples "21" 
+     .FieldType "Farfield" 
+     .Frequency "3.5" 
+     .TransientFarfield "False" 
+     .ExportFarfieldSource "False" 
+     .Create 
+End With
+
+'@ activate local coordinates
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.ActivateWCS "local"
+
+'@ move wcs
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.MoveWCS "local", "0", "14.5", "0.0"
+
+'@ move wcs
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.MoveWCS "local", "0.0", "1", "0.0"
+
+'@ activate local coordinates
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.ActivateWCS "local"
+
+'@ move wcs
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.MoveWCS "local", "0.0", "-6", "0.0"
+
+'@ move wcs
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.MoveWCS "local", "0.0", "-9.5", "0.0"
+
+'@ move wcs
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.MoveWCS "local", "0.0", "10", "0.0"
+
+'@ define brick: component1:Radiating_cut
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Brick
+     .Reset 
+     .Name "Radiating_cut" 
+     .Component "component1" 
+     .Material "Copper (annealed)" 
+     .Xrange "-1.5", "1.5" 
+     .Yrange "0", "2" 
+     .Zrange "1.6", "1.635" 
+     .Create
+End With
+
+'@ transform: mirror component1:Radiating_cut
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:Radiating_cut" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .PlaneNormal "90", "0", "0" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Mirror" 
+End With
+
+'@ transform: mirror component1:Radiating_cut
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:Radiating_cut" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .PlaneNormal "0", "90", "0" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Mirror" 
+End With
+
+'@ transform: rotate component1:Radiating_cut
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:Radiating_cut" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .Angle "0", "0", "180" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Rotate" 
+End With
+
+'@ delete shapes
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Delete "component1:Radiating_cut_1" 
+Solid.Delete "component1:Radiating_cut_2" 
+Solid.Delete "component1:Radiating_cut_3"
+
+'@ activate global coordinates
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.ActivateWCS "global"
+
+'@ activate local coordinates
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.ActivateWCS "local"
+
+'@ move wcs
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.MoveWCS "local", "0.0", "-7", "0.0"
+
+'@ activate global coordinates
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.ActivateWCS "global"
+
+'@ pick edge
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Pick.PickEdgeFromId "component1:radiating_patch", "85", "57"
+
+'@ delete shape: component1:Radiating_cut
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Delete "component1:Radiating_cut"
+
+'@ pick edge
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Pick.PickEdgeFromId "component1:radiating_patch", "37", "25"
+
+'@ define distance dimension by picks
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Dimension
+    .Reset
+    .UsePicks True
+    .SetType "Distance"
+    .SetID "0"
+    .SetOrientation "Smart Mode"
+    .SetDistance "2.579293"
+    .SetViewVector "0.000000", "-0.000032", "-1.000000"
+    .Create
+End With
+Pick.ClearAllPicks
+
+'@ delete dimension 0
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Dimension
+    .RemoveDimension "0"
+End With
+
+'@ define time domain solver parameters
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Mesh.SetCreator "High Frequency" 
+With Solver 
+     .Method "Hexahedral"
+     .CalculationType "TD-S"
+     .StimulationPort "1"
+     .StimulationMode "1"
+     .SteadyStateLimit "-30.0"
+     .MeshAdaption "False"
+     .CalculateModesOnly "False"
+     .SParaSymmetry "False"
+     .StoreTDResultsInCache  "False"
+     .FullDeembedding "False"
+     .SuperimposePLWExcitation "False"
+     .UseSensitivityAnalysis "False"
+End With
+
+'@ pick end point
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Pick.PickEndpointFromId "component1:radiating_patch", "12"
+
+'@ pick end point
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Pick.PickEndpointFromId "component1:radiating_patch", "9"
+
+'@ define distance dimension by picks
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Dimension
+    .Reset
+    .UsePicks True
+    .SetType "Distance"
+    .SetID "1"
+    .SetOrientation "Smart Mode"
+    .SetDistance "0.281215"
+    .SetViewVector "0.222739", "-0.844250", "-0.487473"
+    .Create
+End With
+Pick.ClearAllPicks
+
+'@ activate local coordinates
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.ActivateWCS "local"
+
+'@ activate global coordinates
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.ActivateWCS "global"
+
+'@ activate local coordinates
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.ActivateWCS "local"
+
+'@ move wcs
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.MoveWCS "local", "0.0", "0.2", "0.0"
+
+'@ define brick: component1:cut
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Brick
+     .Reset 
+     .Name "cut" 
+     .Component "component1" 
+     .Material "Copper (annealed)" 
+     .Xrange "-1.5", "0" 
+     .Yrange "0", "15" 
+     .Zrange "-.035", "0" 
+     .Create
+End With
+
+'@ activate global coordinates
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.ActivateWCS "global"
+
+'@ transform: mirror component1:cut
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:cut" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .PlaneNormal "90", "0", "0" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Mirror" 
+End With
+
+'@ transform: mirror component1:cut
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:cut" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .PlaneNormal "0", "90", "0" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Mirror" 
+End With
+
+'@ transform: rotate component1:cut
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:cut" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .Angle "0", "0", "180" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Rotate" 
+End With
+
+'@ boolean subtract shapes: component1:Element_1, component1:cut
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Subtract "component1:Element_1", "component1:cut"
+
+'@ boolean subtract shapes: component1:Element_1, component1:cut_1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Subtract "component1:Element_1", "component1:cut_1"
+
+'@ boolean subtract shapes: component1:Element_1, component1:cut_2
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Subtract "component1:Element_1", "component1:cut_2"
+
+'@ boolean subtract shapes: component1:Element_1, component1:cut_3
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Subtract "component1:Element_1", "component1:cut_3"
+
+'@ activate local coordinates
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.ActivateWCS "local"
+
+'@ activate global coordinates
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.ActivateWCS "global"
+
+'@ pick edge
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Pick.PickEdgeFromId "component1:Element_1", "802", "567"
+
+'@ activate local coordinates
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.ActivateWCS "local"
+
+'@ align wcs with edge
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.AlignWCSWithSelected "EdgeCenter"
+
+'@ define brick: component1:variable add
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Brick
+     .Reset 
+     .Name "variable add" 
+     .Component "component1" 
+     .Material "Copper (annealed)" 
+     .Xrange "-1", "1" 
+     .Yrange "h", "0" 
+     .Zrange "-0.035", "0" 
+     .Create
+End With
+
+'@ activate global coordinates
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.ActivateWCS "global"
+
+'@ transform: mirror component1:variable add
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:variable add" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .PlaneNormal "0", "90", "0" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Mirror" 
+End With
+
+'@ transform: mirror component1:variable add
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:variable add" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .PlaneNormal "90", "0", "0" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Mirror" 
+End With
+
+'@ transform: rotate component1:variable add
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:variable add" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .Angle "0", "0", "180" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Rotate" 
+End With
+
+'@ define brick: component1:horizonatal_decopuler
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Brick
+     .Reset 
+     .Name "horizonatal_decopuler" 
+     .Component "component1" 
+     .Material "Copper (annealed)" 
+     .Xrange "-xd", "xd" 
+     .Yrange "yd+2", "yd+2.5" 
+     .Zrange "-.035", "0" 
+     .Create
+End With
+
+'@ transform: mirror component1:horizonatal_decopuler
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:horizonatal_decopuler" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .PlaneNormal "0", "90", "0" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Mirror" 
+End With
+
+'@ define brick: component1:solid1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Brick
+     .Reset 
+     .Name "solid1" 
+     .Component "component1" 
+     .Material "Copper (annealed)" 
+     .Xrange "-3", "-2.5" 
+     .Yrange "-l", "l" 
+     .Zrange "-.035", "0" 
+     .Create
+End With
+
+'@ transform: mirror component1:solid1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:solid1" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .PlaneNormal "90", "0", "0" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Mirror" 
+End With
+
+'@ rename block: component1:solid1 to: component1:vertical_decoupler
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Rename "component1:solid1", "vertical_decoupler"
+
+'@ rename block: component1:solid1_1 to: component1:vertical_decopuler_1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Rename "component1:solid1_1", "vertical_decopuler_1"
+
+'@ boolean add shapes: component1:Element_1, component1:variable add
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Add "component1:Element_1", "component1:variable add"
+
+'@ boolean add shapes: component1:Element_1, component1:variable add_1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Add "component1:Element_1", "component1:variable add_1"
+
+'@ boolean add shapes: component1:Element_1, component1:variable add_2
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Add "component1:Element_1", "component1:variable add_2"
+
+'@ boolean add shapes: component1:Element_1, component1:variable add_3
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Add "component1:Element_1", "component1:variable add_3"
+
+'@ delete shapes
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Delete "component1:vertical_decopuler_1" 
+Solid.Delete "component1:vertical_decoupler"
+
+'@ boolean add shapes: component1:Element_1, component1:horizonatal_decopuler
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Add "component1:Element_1", "component1:horizonatal_decopuler"
+
+'@ boolean add shapes: component1:Element_1, component1:horizonatal_decopuler_1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Add "component1:Element_1", "component1:horizonatal_decopuler_1"
+
+'@ activate local coordinates
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.ActivateWCS "local"
+
+'@ move wcs
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.MoveWCS "local", "4", "3", "0.0"
+
+'@ define brick: component1:sqr_1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Brick
+     .Reset 
+     .Name "sqr_1" 
+     .Component "component1" 
+     .Material "Copper (annealed)" 
+     .Xrange "0", "3" 
+     .Yrange "0", "5" 
+     .Zrange "-.035", "0" 
+     .Create
+End With
+
+'@ activate global coordinates
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+WCS.ActivateWCS "global"
+
+'@ transform: mirror component1:sqr_1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:sqr_1" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .PlaneNormal "90", "0", "0" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Mirror" 
+End With
+
+'@ transform: mirror component1:sqr_1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:sqr_1" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .PlaneNormal "0", "90", "0" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Mirror" 
+End With
+
+'@ transform: rotate component1:sqr_1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:sqr_1" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .Angle "0", "0", "180" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Rotate" 
+End With
+
+'@ boolean subtract shapes: component1:Element_1, component1:sqr_1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Subtract "component1:Element_1", "component1:sqr_1"
+
+'@ boolean subtract shapes: component1:Element_1, component1:sqr_1_1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Subtract "component1:Element_1", "component1:sqr_1_1"
+
+'@ boolean subtract shapes: component1:Element_1, component1:sqr_1_2
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Subtract "component1:Element_1", "component1:sqr_1_2"
+
+'@ boolean subtract shapes: component1:Element_1, component1:sqr_1_3
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Subtract "component1:Element_1", "component1:sqr_1_3"
+
+'@ store picked point: 1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Pick.NextPickToDatabase "1" 
+Pick.PickMidpointFromId "component1:Element_1", "868"
+
+'@ define brick: component1:Extra strip
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Brick
+     .Reset 
+     .Name "Extra strip" 
+     .Component "component1" 
+     .Material "Copper (annealed)" 
+     .Xrange "25.6-2.1", "xp(1)-2" 
+     .Yrange "-5", "yp(1)" 
+     .Zrange "-0.035", "0" 
+     .Create
+End With
+
+'@ transform: mirror component1:Extra strip
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:Extra strip" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .PlaneNormal "90", "0", "0" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Mirror" 
+End With
+
+'@ transform: rotate component1:Extra strip
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:Extra strip" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .Angle "0", "0", "90" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Rotate" 
+End With
+
+'@ transform: translate component1:Extra strip_2
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:Extra strip_2" 
+     .Vector "0", "-15.55+2", "0" 
+     .UsePickedPoints "False" 
+     .InvertPickedPoints "False" 
+     .MultipleObjects "False" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Transform "Shape", "Translate" 
+End With
+
+'@ transform: mirror component1:Extra strip_2
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Transform 
+     .Reset 
+     .Name "component1:Extra strip_2" 
+     .Origin "Free" 
+     .Center "0", "0", "0" 
+     .PlaneNormal "0", "90", "0" 
+     .MultipleObjects "True" 
+     .GroupObjects "False" 
+     .Repetitions "1" 
+     .MultipleSelection "False" 
+     .Destination "" 
+     .Material "" 
+     .Transform "Shape", "Mirror" 
+End With 
+
+'@ define time domain solver parameters
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Mesh.SetCreator "High Frequency" 
+
+With Solver 
+     .Method "Hexahedral"
+     .CalculationType "TD-S"
+     .StimulationPort "All"
+     .StimulationMode "All"
+     .SteadyStateLimit "-30.0"
+     .MeshAdaption "False"
+     .AutoNormImpedance "False"
+     .NormingImpedance "50"
+     .CalculateModesOnly "False"
+     .SParaSymmetry "False"
+     .StoreTDResultsInCache  "False"
+     .FullDeembedding "False"
+     .SuperimposePLWExcitation "False"
+     .UseSensitivityAnalysis "False"
+End With
+
+
+'@ boolean add shapes: component1:Element_1, component1:Extra strip
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Add "component1:Element_1", "component1:Extra strip" 
+
+
+'@ boolean add shapes: component1:Element_1, component1:Extra strip_1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Add "component1:Element_1", "component1:Extra strip_1" 
+
+
+'@ boolean add shapes: component1:Element_1, component1:Extra strip_2
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Add "component1:Element_1", "component1:Extra strip_2" 
+
+
+'@ boolean add shapes: component1:Element_1, component1:Extra strip_2_1
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Add "component1:Element_1", "component1:Extra strip_2_1" 
+
+
+'@ rename block: component1:Element_1 to: component1:Ground
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Solid.Rename "component1:Element_1", "Ground"
+
+
+'@ define monitor: surface-current (f=3.5)
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Monitor 
+     .Reset 
+     .Name "surface-current (f=3.5)" 
+     .Dimension "Volume" 
+     .Domain "Frequency" 
+     .FieldType "Surfacecurrent" 
+     .Frequency "3.5" 
+     .Create 
+End With 
+
+
+'@ define time domain solver parameters
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+Mesh.SetCreator "High Frequency" 
+
+With Solver 
+     .Method "Hexahedral"
+     .CalculationType "TD-S"
+     .StimulationPort "1"
+     .StimulationMode "1"
+     .SteadyStateLimit "-30.0"
+     .MeshAdaption "False"
+     .CalculateModesOnly "False"
+     .SParaSymmetry "False"
+     .StoreTDResultsInCache  "False"
+     .FullDeembedding "False"
+     .SuperimposePLWExcitation "False"
+     .UseSensitivityAnalysis "False"
+End With
+
+
