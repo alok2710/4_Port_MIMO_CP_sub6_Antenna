@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CST3DFieldViewInfoText creator="" version="20101110">
+  <Title data="High Frequency Mesh" type="High Frequency Mesh"/>
+  <TextItem name="Meshcells:_tag">
+    <Text visible="true" label="Meshcells:" data="133056" condition="" numberFormat="g" numberPrecision="4"/>
+  </TextItem>
+  <TextItem name="Symmetry Planes:_tag">
+    <Text visible="true" label="Symmetry Planes:" data="none" condition="" numberFormat="g" numberPrecision="4"/>
+  </TextItem>
+  <TextItem name="Mouse Position:_tag">
+    <Text visible="true" label="Mouse Position:" data="$ifxOpenSGSparseGridViewer@intersectionPoint$" condition="" numberFormat="g" numberPrecision="4"/>
+  </TextItem>
+  <TextItem name="Meshplane Position:_tag">
+    <Text visible="true" label="Meshplane Position:" data="$ifxOpenSGSparseGridViewer@meshplanePosition$" condition="" numberFormat="g" numberPrecision="4"/>
+  </TextItem>
+</CST3DFieldViewInfoText>

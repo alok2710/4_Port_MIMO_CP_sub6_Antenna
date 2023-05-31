@@ -1532,13 +1532,12 @@ With Transform
      .Destination "" 
      .Material "" 
      .Transform "Shape", "Mirror" 
-End With 
+End With
 
 '@ define time domain solver parameters
 
 '[VERSION]2016.1|25.0.2|20160226[/VERSION]
 Mesh.SetCreator "High Frequency" 
-
 With Solver 
      .Method "Hexahedral"
      .CalculationType "TD-S"
@@ -1556,36 +1555,30 @@ With Solver
      .UseSensitivityAnalysis "False"
 End With
 
-
 '@ boolean add shapes: component1:Element_1, component1:Extra strip
 
 '[VERSION]2016.1|25.0.2|20160226[/VERSION]
-Solid.Add "component1:Element_1", "component1:Extra strip" 
-
+Solid.Add "component1:Element_1", "component1:Extra strip"
 
 '@ boolean add shapes: component1:Element_1, component1:Extra strip_1
 
 '[VERSION]2016.1|25.0.2|20160226[/VERSION]
-Solid.Add "component1:Element_1", "component1:Extra strip_1" 
-
+Solid.Add "component1:Element_1", "component1:Extra strip_1"
 
 '@ boolean add shapes: component1:Element_1, component1:Extra strip_2
 
 '[VERSION]2016.1|25.0.2|20160226[/VERSION]
-Solid.Add "component1:Element_1", "component1:Extra strip_2" 
-
+Solid.Add "component1:Element_1", "component1:Extra strip_2"
 
 '@ boolean add shapes: component1:Element_1, component1:Extra strip_2_1
 
 '[VERSION]2016.1|25.0.2|20160226[/VERSION]
-Solid.Add "component1:Element_1", "component1:Extra strip_2_1" 
-
+Solid.Add "component1:Element_1", "component1:Extra strip_2_1"
 
 '@ rename block: component1:Element_1 to: component1:Ground
 
 '[VERSION]2016.1|25.0.2|20160226[/VERSION]
 Solid.Rename "component1:Element_1", "Ground"
-
 
 '@ define monitor: surface-current (f=3.5)
 
@@ -1598,14 +1591,12 @@ With Monitor
      .FieldType "Surfacecurrent" 
      .Frequency "3.5" 
      .Create 
-End With 
-
+End With
 
 '@ define time domain solver parameters
 
 '[VERSION]2016.1|25.0.2|20160226[/VERSION]
 Mesh.SetCreator "High Frequency" 
-
 With Solver 
      .Method "Hexahedral"
      .CalculationType "TD-S"
@@ -1620,5 +1611,40 @@ With Solver
      .SuperimposePLWExcitation "False"
      .UseSensitivityAnalysis "False"
 End With
+
+'@ define monitor: h-field (f=3.5)
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Monitor 
+     .Reset 
+     .Name "h-field (f=3.5)" 
+     .Dimension "Volume" 
+     .Domain "Frequency" 
+     .FieldType "Hfield" 
+     .Frequency "3.5" 
+     .UseSubvolume "False" 
+     .Coordinates "Structure" 
+     .SetSubvolume "-30.36", "30.36", "-30", "30", "-0.035", "12.995" 
+     .SetSubvolumeOffset "0.0", "0.0", "0.0", "0.0", "0.0", "0.0" 
+     .Create 
+End With 
+
+
+'@ define monitor: e-field (f=3.5)
+
+'[VERSION]2016.1|25.0.2|20160226[/VERSION]
+With Monitor 
+     .Reset 
+     .Name "e-field (f=3.5)" 
+     .Dimension "Volume" 
+     .Domain "Frequency" 
+     .FieldType "Efield" 
+     .Frequency "3.5" 
+     .UseSubvolume "False" 
+     .Coordinates "Structure" 
+     .SetSubvolume "-30.36", "30.36", "-30", "30", "-0.035", "12.995" 
+     .SetSubvolumeOffset "0.0", "0.0", "0.0", "0.0", "0.0", "0.0" 
+     .Create 
+End With 
 
 

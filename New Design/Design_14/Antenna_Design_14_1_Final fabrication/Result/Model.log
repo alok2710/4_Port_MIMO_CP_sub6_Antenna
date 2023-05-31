@@ -454,3 +454,351 @@ Solver finished at: 01:24 AM Tuesday, 23. May 2023
 Creating parametric 1D results for Run ID 1
 
 --------------------------------------------------------------------------------
+*** Warning ***
+
+The monitor surface-current (f=3.5) is not supported and will be ignored.
+Please define an 'H-Field and Surface current monitor' instead.
+
+--------------------------------------------------------------------------------
+The 3D field monitors do not generate a complete system for the power loss
+curve (1D) computation. Some frequency points will be computed with only one
+source of electric or magnetic losses.
+
+--------------------------------------------------------------------------------
+Adaptation results were found. Adaptive port meshing skipped.
+
+--------------------------------------------------------------------------------
+The 3D field monitors do not generate a complete system for the power loss
+curve (1D) computation. Some frequency points will be computed with only one
+source of electric or magnetic losses.
+
+--------------------------------------------------------------------------------
+
+Solver started at: 01:37 AM Tuesday, 23. May 2023
+
+  Module:  Time Domain: S-Parameter (Win 64)
+  Version: 2016.1 Release from 2016-02-26 (change 422839)
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+======================================================================
+ Solver cycle: 1
+======================================================================
+
+Stimulation at port 1 (mode 1) 
+
+
+--------------------------------------------------------------------------------
+Units settings: 
+
+  Dimensions: mm
+  Frequency:  GHz
+  Time:       ns
+
+--------------------------------------------------------------------------------
+Using electric shielding for port 1, 2, 3, 4.
+
+--------------------------------------------------------------------------------
+Port mode solver: Detected dispersive material(s) at port 1, 2, 3, 4. 
+Using a constant approximation of dispersive material(s) at 3.5 GHz and
+neglecting loss terms. 
+
+--------------------------------------------------------------------------------
+Boundary conditions: 
+
+  YZsymmetry: none
+  XZsymmetry: none
+  XYsymmetry: none
+
+  Xmin: expanded open, 4 Layer, depth 11.7234 mm
+  Xmax: expanded open, 4 Layer, depth 11.7234 mm
+
+  Ymin: expanded open, 4 Layer, depth 11.9462 mm
+  Ymax: expanded open, 4 Layer, depth 11.9462 mm
+
+  Zmin: expanded open, 4 Layer, depth 11.9464 mm
+  Zmax: expanded open, 4 Layer, depth 12.7351 mm
+
+  PML-Type: Convolution PML
+
+--------------------------------------------------------------------------------
+Frequency settings: 
+
+  Fmin:         1
+  Fmax:         6
+  Nfsteps(lin): 1001
+
+--------------------------------------------------------------------------------
+Waveguide boundaries:
+
+Port: 1
+
+Reloaded mode(s) for port 1.
+
+--------------------------------------------------------------------------------
+Port: 2
+
+Reloaded mode(s) for port 2.
+
+--------------------------------------------------------------------------------
+Port: 3
+
+Reloaded mode(s) for port 3.
+
+--------------------------------------------------------------------------------
+Port: 4
+
+Reloaded mode(s) for port 4.
+
+--------------------------------------------------------------------------------
+Field update statistics:
+
+  Number of components in total: 	825869
+  Number of lossy metal components:	4444
+  Number of disp. elements:		22368
+
+Subcycling state:      Automatically deactivated
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Broadband farfield monitor expansion origin: 
+   x: 0
+   y: 0
+   z: 6.48
+
+--------------------------------------------------------------------------------
+Broadband farfield monitor: Using order 13. (195 farfield modes.)
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Steady state energy criterion met, solver finished successfully.
+
+--------------------------------------------------------------------------------
+Frequency domain results normalized to default signal.
+
+--------------------------------------------------------------------------------
+
+  ----------------------------------------------------------------------------
+                      Peak memory used (kB)         Free physical memory (kB) 
+                                                    At begin     Minimum      
+  ----------------------------------------------------------------------------
+  Matrices calc.      149876                        2067368      1944548      
+  Solver run total    229708                        1826492      1666188      
+  ----------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Solver Statistics:
+
+  Hardware:
+     Computer name:                 	LAPTOP-BK7GUF1N 
+
+     Number of CPU threads:             4
+     Hardware info:                  	Hardware acceleration not activated
+
+  Number of mesh cells:             	133056
+  Excitation duration:              	1.42181950e+000 ns 
+  Calculation time for excitation:  	10     	s
+  Number of calculated pulse widths:	4.39934 
+  Steady state accuracy limit:      	-30	dB 
+  Simulated number of time steps:   	8030   
+  Maximum number of time steps:     	36505  
+  Time step width:
+     without subcycles:             	7.78961517e-004 ns
+     used:                          	7.78961517e-004 ns
+
+  Reloading matrices:               	0      	s
+  Solver setup time:                	4      	s
+  Solver loop time:                 	42     	s
+  Solver post processing time:      	1      	s
+  Processing of broadband farfields:	7      	s
+                                    	------------
+  Total solver time:                	54     	s
+
+--------------------------------------------------------------------------------
+
+  Adaptive port meshing time:       	0      	s
+  Total solver time (all cycles):   	54     	s
+                                    	------------
+  Total simulation time:            	54     	s
+
+--------------------------------------------------------------------------------
+Solver finished at: 01:38 AM Tuesday, 23. May 2023
+
+
+--------------------------------------------------------------------------------
+Creating parametric 1D results for Run ID 1
+
+--------------------------------------------------------------------------------
+*** Warning ***
+
+The monitor surface-current (f=3.5) is not supported and will be ignored.
+Please define an 'H-Field and Surface current monitor' instead.
+
+--------------------------------------------------------------------------------
+Adaptation results were found. Adaptive port meshing skipped.
+
+--------------------------------------------------------------------------------
+
+Solver started at: 01:43 AM Tuesday, 23. May 2023
+
+  Module:  Time Domain: S-Parameter (Win 64)
+  Version: 2016.1 Release from 2016-02-26 (change 422839)
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+======================================================================
+ Solver cycle: 1
+======================================================================
+
+Stimulation at port 1 (mode 1) 
+
+
+--------------------------------------------------------------------------------
+Units settings: 
+
+  Dimensions: mm
+  Frequency:  GHz
+  Time:       ns
+
+--------------------------------------------------------------------------------
+Using electric shielding for port 1, 2, 3, 4.
+
+--------------------------------------------------------------------------------
+Port mode solver: Detected dispersive material(s) at port 1, 2, 3, 4. 
+Using a constant approximation of dispersive material(s) at 3.5 GHz and
+neglecting loss terms. 
+
+--------------------------------------------------------------------------------
+Boundary conditions: 
+
+  YZsymmetry: none
+  XZsymmetry: none
+  XYsymmetry: none
+
+  Xmin: expanded open, 4 Layer, depth 11.7234 mm
+  Xmax: expanded open, 4 Layer, depth 11.7234 mm
+
+  Ymin: expanded open, 4 Layer, depth 11.9462 mm
+  Ymax: expanded open, 4 Layer, depth 11.9462 mm
+
+  Zmin: expanded open, 4 Layer, depth 11.9464 mm
+  Zmax: expanded open, 4 Layer, depth 12.7351 mm
+
+  PML-Type: Convolution PML
+
+--------------------------------------------------------------------------------
+Frequency settings: 
+
+  Fmin:         1
+  Fmax:         6
+  Nfsteps(lin): 1001
+
+--------------------------------------------------------------------------------
+Waveguide boundaries:
+
+Port: 1
+
+Reloaded mode(s) for port 1.
+
+--------------------------------------------------------------------------------
+Port: 2
+
+Reloaded mode(s) for port 2.
+
+--------------------------------------------------------------------------------
+Port: 3
+
+Reloaded mode(s) for port 3.
+
+--------------------------------------------------------------------------------
+Port: 4
+
+Reloaded mode(s) for port 4.
+
+--------------------------------------------------------------------------------
+Field update statistics:
+
+  Number of components in total: 	825869
+  Number of lossy metal components:	4444
+  Number of disp. elements:		22368
+
+Subcycling state:      Automatically deactivated
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Broadband farfield monitor expansion origin: 
+   x: 0
+   y: 0
+   z: 6.48
+
+--------------------------------------------------------------------------------
+Broadband farfield monitor: Using order 13. (195 farfield modes.)
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Steady state energy criterion met, solver finished successfully.
+
+--------------------------------------------------------------------------------
+Frequency domain results normalized to default signal.
+
+--------------------------------------------------------------------------------
+
+  ----------------------------------------------------------------------------
+                      Peak memory used (kB)         Free physical memory (kB) 
+                                                    At begin     Minimum      
+  ----------------------------------------------------------------------------
+  Matrices calc.      149876                        2067368      1944548      
+  Solver run total    246096                        1900504      1690492      
+  ----------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Solver Statistics:
+
+  Hardware:
+     Computer name:                 	LAPTOP-BK7GUF1N 
+
+     Number of CPU threads:             4
+     Hardware info:                  	Hardware acceleration not activated
+
+  Number of mesh cells:             	133056
+  Excitation duration:              	1.42181950e+000 ns 
+  Calculation time for excitation:  	8      	s
+  Number of calculated pulse widths:	4.39934 
+  Steady state accuracy limit:      	-30	dB 
+  Simulated number of time steps:   	8030   
+  Maximum number of time steps:     	36505  
+  Time step width:
+     without subcycles:             	7.78961517e-004 ns
+     used:                          	7.78961517e-004 ns
+
+  Reloading matrices:               	0      	s
+  Solver setup time:                	2      	s
+  Solver loop time:                 	37     	s
+  Solver post processing time:      	2      	s
+  Processing of broadband farfields:	4      	s
+                                    	------------
+  Total solver time:                	45     	s
+
+--------------------------------------------------------------------------------
+
+  Adaptive port meshing time:       	0      	s
+  Total solver time (all cycles):   	45     	s
+                                    	------------
+  Total simulation time:            	45     	s
+
+--------------------------------------------------------------------------------
+Solver finished at: 01:44 AM Tuesday, 23. May 2023
+
+
+--------------------------------------------------------------------------------
+Creating parametric 1D results for Run ID 1
+
+--------------------------------------------------------------------------------

@@ -20,3 +20,25 @@ Template based postprocessing started at: 01:24 AM Tuesday, 23. May 2023
 
 Template based postprocessing finished at: 01:25 AM Tuesday, 23. May 2023
 ----------------------------------------------------------------------------------------
+Template based postprocessing started at: 01:38 AM Tuesday, 23. May 2023
+
+  Evaluating 'Directivity,Theta=0,Phi=0': 19 s
+  Evaluating 'Directivity,Theta=4,Phi=0': 10 s
+  Evaluating 'Directivity,Theta=9,Phi=0': 9 s
+  Evaluating 'Directivity,Theta=9,Phi=0_1': 17 s
+
+  Total time: 57 s  ( = 0 h, 0 m, 57 s )
+
+Template based postprocessing finished at: 01:39 AM Tuesday, 23. May 2023
+----------------------------------------------------------------------------------------
+Template based postprocessing started at: 01:44 AM Tuesday, 23. May 2023
+
+  Evaluating 'Directivity,Theta=0,Phi=0': 18 s
+  Evaluating 'Directivity,Theta=4,Phi=0': 9 s
+  Evaluating 'Directivity,Theta=9,Phi=0': 9 s
+  Evaluating 'Directivity,Theta=9,Phi=0_1': 17 s
+
+  Total time: 55 s  ( = 0 h, 0 m, 55 s )
+
+Template based postprocessing finished at: 01:45 AM Tuesday, 23. May 2023
+----------------------------------------------------------------------------------------

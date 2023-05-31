@@ -83,6 +83,28 @@ mon_nfSteps: "21"
 *** endmonitor
 
 *** newmonitor
+monname: "e-field (f=3.5)"
+nmonfrequencies: 1
+monfrequencies: "3.5" 
+montype: 0
+mondomain: 1
+mon_fmin: ""
+mon_fmax: ""
+mon_nfSteps: ""
+*** endmonitor
+
+*** newmonitor
+monname: "h-field (f=3.5)"
+nmonfrequencies: 1
+monfrequencies: "3.5" 
+montype: 1
+mondomain: 1
+mon_fmin: ""
+mon_fmax: ""
+mon_nfSteps: ""
+*** endmonitor
+
+*** newmonitor
 monname: "surface-current (f=3.5)"
 nmonfrequencies: 1
 monfrequencies: "3.5" 

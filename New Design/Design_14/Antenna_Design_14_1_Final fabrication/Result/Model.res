@@ -1,5 +1,53 @@
 MWS Result File Version 20150206
-size=i:129
+size=i:146
+
+type=s:HIDDENITEM
+problemclass=s::8:1000
+visibility=s:hidden
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+files=s:dVolume_loss_in_FR-4 (lossy)(1).sig
+
+type=s:HIDDENITEM
+problemclass=s::8:1000
+visibility=s:hidden
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+files=s:aVolume_loss_in_FR-4 (lossy)(1).sig
+
+type=s:HIDDENITEM
+problemclass=s::8:1000
+visibility=s:hidden
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+files=s:dTotal_metal_loss(1).sig
+
+type=s:HIDDENITEM
+problemclass=s::8:1000
+visibility=s:hidden
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+files=s:aTotal_metal_loss(1).sig
+
+type=s:HIDDENITEM
+problemclass=s::8:1000
+visibility=s:hidden
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+files=s:dMetal_loss_Copper (annealed)(1).sig
+
+type=s:HIDDENITEM
+problemclass=s::8:1000
+visibility=s:hidden
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+files=s:aMetal_loss_Copper (annealed)(1).sig
 
 type=s:HIDDENITEM
 problemclass=s::8:1000
@@ -1363,4 +1411,142 @@ result=s:1
 parametric=s:P
 treepath=s:1D Results\AutomaticRunInformation
 files=s:AutomaticRunInformation
+
+type=s:XYSIGNAL2
+subtype=s:complex
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+treepath=s:1D Results\Power\Excitation [1]\Loss per Material\Metal loss in Copper (annealed)
+files=s:cMetal_loss_Copper (annealed)(1).sig
+xlabel=s:Frequency / GHz
+ylabel=s:W
+title=s:Power in Watt
+
+type=s:XYSIGNAL2
+subtype=s:complex
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+treepath=s:1D Results\Power\Excitation [1]\Loss in Metals
+files=s:cTotal_metal_loss(1).sig
+xlabel=s:Frequency / GHz
+ylabel=s:W
+title=s:Power in Watt
+
+type=s:HFIELD3D
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+treepath=s:2D/3D Results\H-Field\h-field (f=3.5) [1]
+files=s:h-field (f=3.5)_1,1.m3d
+ylabel=s:h-field (f=3.5) [1]
+
+type=s:SURFACECURRENT
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+treepath=s:2D/3D Results\Surface Current\surface current (f=3.5) [1]
+files=s:h-field (f=3.5)_1,1.m3d
+ylabel=s:h-field (f=3.5) [1]
+
+type=s:XYSIGNAL2
+subtype=s:complex
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+treepath=s:1D Results\Power\Excitation [1]\Loss per Material\Volume loss in FR-4 (lossy)
+files=s:cVolume_loss_in_FR-4 (lossy)(1).sig
+xlabel=s:Frequency / GHz
+ylabel=s:W
+title=s:Power in Watt
+
+type=s:XYSIGNAL2
+subtype=s:complex
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+treepath=s:1D Results\Power\Excitation [1]\Loss in Dielectrics
+files=s:cTotal_loss_in_dielectrics(1).sig
+xlabel=s:Frequency / GHz
+ylabel=s:W
+title=s:Power in Watt
+
+type=s:XYSIGNAL2
+subtype=s:complex
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:surviveparchange
+result=s:1
+parametric=s:P
+treepath=s:1D Results\Power\Excitation [1]\Loss per Material\Metal loss in Copper (annealed)
+files=s:cMetal_loss_Copper (annealed)(1).sig
+xlabel=s:Frequency / GHz
+ylabel=s:W
+title=s:Power in Watt
+
+type=s:XYSIGNAL2
+subtype=s:complex
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:surviveparchange
+result=s:1
+parametric=s:P
+treepath=s:1D Results\Power\Excitation [1]\Loss in Metals
+files=s:cTotal_metal_loss(1).sig
+xlabel=s:Frequency / GHz
+ylabel=s:W
+title=s:Power in Watt
+
+type=s:XYSIGNAL2
+subtype=s:complex
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:surviveparchange
+result=s:1
+parametric=s:P
+treepath=s:1D Results\Power\Excitation [1]\Loss per Material\Volume loss in FR-4 (lossy)
+files=s:cVolume_loss_in_FR-4 (lossy)(1).sig
+xlabel=s:Frequency / GHz
+ylabel=s:W
+title=s:Power in Watt
+
+type=s:XYSIGNAL2
+subtype=s:complex
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:surviveparchange
+result=s:1
+parametric=s:P
+treepath=s:1D Results\Power\Excitation [1]\Loss in Dielectrics
+files=s:cTotal_loss_in_dielectrics(1).sig
+xlabel=s:Frequency / GHz
+ylabel=s:W
+title=s:Power in Watt
+
+type=s:EFIELD3D
+problemclass=s::8:1000
+visibility=s:visible
+creation=s:internal
+lifetime=s:rebuild
+result=s:1
+treepath=s:2D/3D Results\E-Field\e-field (f=3.5) [1]
+files=s:e-field (f=3.5)_1,1.m3d
+ylabel=s:e-field (f=3.5) [1]
 
